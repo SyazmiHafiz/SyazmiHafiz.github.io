@@ -7392,7 +7392,11 @@ textarea.form-control-lg {
 }
 
 .bg-primary {
-  background-color: #bd5d38 !important;
+  background-color: #646161 !important;
+}
+
+.bg-separuh{
+  background-color: #ECEAEA !important;
 }
 
 .bg-secondary {
