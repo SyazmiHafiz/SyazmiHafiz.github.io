@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="theme-color" content="#BC8887" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Undangan Majlis Perkahwinan Syafiqa & Hisyam</title>
+		
+		<!--<meta property="og:title" content="ndangan Majlis Perkahwinan Syafiqa & Hisyam">-->
+		<meta property="og:description" content="Digital Card">
+		<!--<meta property="og:locale" content="id_ID" />-->
+		
+		
+		<meta name="twitter:card" content="summary_large_image">
+		<!-- Bulma Version 0.8.x-->
+		<link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
+		<link rel="stylesheet" href="https://unpkg.com/bulma-tooltip@0.1.5/dist/bulma-tooltip.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/menikah.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.countdown.css" />
+
+		<script
+		src="https://kit.fontawesome.com/2828f7885a.js"
+		integrity="sha384-WAsFbnLEQcpCk8lM1UTWesAf5rGTCvb2Y+8LvyjAAcxK1c3s5c0L+SYOgxvc6PWG"
+		crossorigin="anonymous"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/jquery.coundown.js"></script>
+		<link rel="icon" type="image/png" href="image/favicon.png" />
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23064379-20"></script>
+		<!-- Begin Script for Countdown -->
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'UA-23064379-20');
+		</script>
+		<!-- Begin Script for Countdown -->
+		
+		<!-- Github Button -->
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
+	
+	</head>
+	
+	<body>
+	
+	<audio class="audio" loop autoplay="autoplay" controls id="audioelement" style="display:none">
+    
+    <source src="music.mp3" type="audio/mpeg"/>
+</audio>
+	
+	
+	
+	
+		<!-- Begin Preloader -->
+		<div class="preloader-wrapper">
+			<div class="preloader">
+				<img src="image/favicon.png" alt="Flower" />
+			</div>
+		</div>
+		<!-- End Preloader-->
+		<!-- Begin Header -->
+		<div class="header-wrapper" id="home">
+			<!-- Begin Hero -->
+			<section class="hero is-large">
+				<!-- Begin Mobile Nav -->
+				<nav class="navbar is-transparent is-hidden-desktop">
+					<!-- Begin Burger Menu -->
+					<div class="navbar-brand is-fixed-top">
+						<div class="navbar-burger burger" data-target="mobile-nav">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</div>
+					<!-- End Burger Menu -->
+					<div id="mobile-nav" class="navbar-menu">
+						<div class="navbar-end">
+							<div class="navbar-item">
+								<a class="navbar-item" href="#aturan">
+									Aturan Majlis
+								</a>
+							</div>
+							<div class="navbar-item">
+								<a class="navbar-item" href="#lokasi">
+									Lokasi
+								</a>
+							</div>
+							
+							<div class="navbar-item">
+								<a class="navbar-item" href="#akad-nikah-aimi-asyraf">
+									Akad Nikah Syafiqa & Hisyam
+								</a>
+							</div>
+							<div class="navbar-item">
+								<a class="navbar-item" href="#rsvp">
+									SOP Majlis & RSVP
+								</a>
+							</div>
+						</div>
+					</div>
+				</nav>
+				<!-- End Mobile Nav -->
+				<!-- Begin Hero Content-->
+				<div class="hero-body">
+					<div class="container has-text-centered">
+						<h1 class="subtitle">UNDANGAN MAJLIS PERKAHWINAN</h1><br>
+						<h2 class="title">Syafiqa & Hisyam</h2>
+						<h4 class="subtitle tempatwaktu">
+							
+							30 Januari 2022, Ahad
+							</br>
+							LOT 4308-R. Jalan Parit Derahman,
+							</br>
+							Kampung Bukit Hijau, 45800 Jeram,
+							</br>
+							Selangor
+							
+						</h4>
+					</div>
+					<!-- Start Countdown -->       
+					<div>
+						<ul id="hitungmundur" >
+							<li><span class="days">00</span><p class="days_text">Hari</p></li>
+							<li class="separator">:</li>
+							<li><span class="hours">00</span><p class="hours_text">Jam</p></li>
+							<li class="separator">:</li>
+							<li><span class="minutes">00</span><p class="minutes_text">Minit</p></li>
+							<li class="separator">:</li>
+							<li><span class="seconds">00</span><p class="seconds_text">Saat</p></li>
+						</ul>
+						<div class="spasi">
+						</div>
+						<script type="text/javascript">
+							var now = new Date();
+							var day = now.getDate();
+							var month = now.getMonth() + 1;
+							var year = now.getFullYear() + 1;
+							
+							var nextyear = month + '/' + day + '/' + year + ' 07:07:07';
+							var hari = '01/30/2022 11:00:00';
+							
+							$('#hitungmundur').countdown({
+								date: hari, // TODO Date format: 07/27/2017 17:00:00
+								offset: +08, // TODO Your Timezone Offset
+								day: 'Hari',
+								days: 'Hari',
+								hour: 'Jam',
+								hours: 'Jam',
+								minute: 'Minit',
+								minutes: 'Minit',
+								second: 'Saat',
+								seconds: 'Saat'
+								}, function () {
+								alert('Done!');
+							});
+						</script>  
+					</div>
+					<!-- End Countdown -->
+				</div>
+				<!-- End Hero Content-->
+				<!-- Begin Hero Menu -->
+				<div class="hero-foot ">
+					<div class="hero-foot--wrapper">
+						<div class="columns">
+							<div class="column is-12 hero-menu-desktop has-text-centered">
+								<ul>
+									<li class="is-active">
+										<a href="#home">Home</a>
+									</li>
+									<li>
+										<a href="#aturan">Aturan Majlis</a>
+									</li>
+									<li>
+										<a href="#lokasi">Lokasi</a>
+									</li>
+									<li>
+										<a href="#akad-nikah-aimi-asyraf">Akad Nikah Syafiqa & Hisyam</a>
+									</li>
+									
+									<li>
+										<a href="#rsvp">RSVP</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Hero Menu -->
+			</section>
+			<!-- End Hero -->
+		</div>
+		<!-- End Header -->
+		
+		<!-- Begin Main Content -->
+		<div class="main-content">
+			<!-- Begin regular-section-->
+			<section class="section-light no-padding-top regular-section has-text-centered has-vertically-aligned-content" id="regular-section">
+				
+				<div data-aos="fade-up" data-aos-easing="linear">
+					<img src="image/bismillah.png" class="bismillah has-text-centered" alt="Bismillahirrahmaanirrahiim">
+				</div>
+				
+				<p class="bodytext" data-aos="fade-up" data-aos-easing="linear">
+					Assalamu'alaikum Warahmatullahi Wabarakatuh.
+				</p><br />
+				<span class="space40px"><b>MAHZIR BIN ABDULLAH</b></span>
+				<span class="space40px"><b>&</b></span>
+					<span class="space40px"><b>HAINUN BINTI ABU HASSAN</b></span>
+					<p>
+						Dengan penuh kesyukuran ke hadrat Allah S.W.T dan seikhlas hati
+						<br />
+						kami menjemput Dato' / Datin / Tuan / Puan / Encik / Cik ke
+						<br />
+						Undangan Majlis Perkahwinan Putera kami
+					</p>
+					<br />
+					
+					
+					<div data-aos="fade-up" data-aos-easing="linear">
+						<div class="nama-lengkap" >
+							NYAK HISYAMUDIN
+						</div>
+						<div class="ampersand">&</div>
+							<div class="nama-lengkap">
+								NUR SYAFIQA
+							</div>
+							
+						</div>
+						<span class="space40px"></span>
+						<div data-aos="fade-up" data-aos-easing="linear">
+							<img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
+						</div>
+						<span class="space40px"></span>
+						<span class="space40px"></span>
+					</section>
+					<!-- End regular-section-->    
+					
+					<!-- Begin Waktu Section -->
+					<section class="section-dark" id="aturan">
+						<div class="container">
+							
+							<div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
+								<h1 class="title has-text-centered section-title">Aturan Majlis</h1>
+							</div>
+							<div class="columns is-multiline" data-aos="fade-up" data-aos-easing="linear">
+								<div
+								class="column is-4 has-vertically-aligned-content">
+									
+									<p class="is-larger has-text-centered">
+										<div class="waktu tanggal-hari has-text-centered">Ahad</div> 
+										<div class="waktu tanggal-angka has-text-centered">30</div>
+										<div class="waktu tanggal-bulan has-text-centered">Januari 2022</div>
+									</p>
+									
+								</div>
+								
+								
+								<div class="column is-4 has-vertically-aligned-content">
+									
+									<h1 class="waktu is-larger has-text-centered">
+										Resepsi:
+										<br>
+										<strong>11:00AM  - 04:00PM</strong>
+									</h1>
+								</div>
+								
+								<div class="column is-4 has-vertically-aligned-content">
+									
+									<p class="waktu is-larger has-text-centered">
+										Turut Mengundang:
+										<br>
+										<strong>Seisi Keluarga</strong>
+									</p>
+									
+								</div>
+								
+							</div>
+						</div>
+						<div class="space40px"></div>
+						<div class="main-content has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+							<a href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=NGgzdW00NG84dXFwMzcwNXYxbGliNGxzaWggZGFlbmdkb2FuZ0Bt&amp;tmsrc=daengdoang%40gmail.com" target="_blank" class="button has-tooltip btn-cta" data-tooltip="Add to Calendar" target="_blank" data-aos="zoom-in">
+								<i class="far fa-calendar-plus"></i>
+								&nbsp;&nbsp;Google Calendar
+							</a>
+						</div>
+					</section>
+					<!-- End Waktu Content -->
+					
+					<!-- Begin Lokasi Section -->
+					<section class="section-darker" id="lokasi" >
+						<div class="container">
+							<div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
+								<h1 class="title has-text-centered section-title">Lokasi</h1>
+								<p class="tempat is-larger has-text-centered">
+									<strong>LOT 4308-R. Jalan Parit Derahman,</strong>
+									<br><strong>
+									Kampung Bukit Hijau, 45800 Jeram,
+									<br></strong>
+									<br><strong>
+									Selangor
+									<br></strong>
+									
+								</p>
+							</div>
+							<div class="section-map" data-aos="fade-up" data-aos-easing="linear">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1674.7849689818913!2d101.35796477880368!3d3.2674251293210315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc58b169700ffb%3A0x55739258dd9611cf!2s4308%2C%20Jln%20Parit%20Derahman%2C%2045800%20Jeram%2C%20Selangor!5e0!3m2!1sen!2smy!4v1642403523782!5m2!1sen!2smy" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+							</div>
+							<div class="space40px"></div>
+							<div class="has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+								<a href="https://www.google.com/maps/place/4308,+Jln+Parit+Derahman,+45800+Jeram,+Selangor/@3.2674251,101.3579648,18.25z/data=!4m5!3m4!1s0x31cc58b169700ffb:0x55739258dd9611cf!8m2!3d3.2676774!4d101.3586736?hl=en" class="button btn-cta" target="_blank" data-aos="zoom-in">
+									<i class="far fa-directions"></i>
+									&nbsp;&nbsp;Google Maps
+								</a>
+							</div>
+						</div>
+					</section>
+					<!-- End Lokasi Content -->
+					
+					<!-- Begin Tentang Sherly and Daeng -->
+					<section class="section-light regular-section is-fullheight" id="akad-nikah-aimi-asyraf">
+						<div class="container">
+							<div class="columns is-multiline">  
+								<div class="column has-text-centered is-12 prolog">
+									<h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">Akad Nikah Syafiqa & Hisyam</h1>
+									
+									
+									
+									<!-- IMAGES -->  
+									<div class=" tile">
+										<div class="tile is-ancestor">
+											<div class="tile is-parent">
+												<article class="tile is-child foto1 notification foto1" data-aos="fade-up" data-aos-easing="linear">
+													
+												</article>
+											</div>
+											<div class="tile is-parent">
+												<article class="tile is-child notification foto2" data-aos="fade-up" data-aos-easing="linear">
+													         
+												</article>
+											</div>
+											<div class="tile is-parent">
+												<article class="tile is-child notification foto3" data-aos="fade-up" data-aos-easing="linear">
+													
+												</article>
+											</div>
+										</div>
+									</div>
+									<div class="space24px"></div>
+									<div class=" tile">
+										<div class="tile is-ancestor">
+										<div class="tile is-parent">
+											<article class="tile is-child notification foto4" data-aos="fade-up" data-aos-easing="linear">
+												
+											</article>
+										</div>
+										<div class="tile is-parent">
+											<article class="tile is-child notification foto5" data-aos="fade-up" data-aos-easing="linear">
+												
+											</article>
+										</div>
+										<div class="tile is-parent">              
+											<article class="tile is-child notification foto6" data-aos="fade-up" data-aos-easing="linear">
+												
+											</article>
+										</div>
+									</div>   
+									</div>   
+									<!-- IMAGES -->
+									<div class="space40px"></div>
+									<div data-aos="fade-up" data-aos-easing="linear">
+										<img src="image/divider-leaves.png" class="divider has-vertically-align" alt="~~~">
+									</div> 
+									<div class="space40px"></div>
+									<div class="space40px"></div>
+									
+								</div>
+							</div>
+						</section>
+						<!-- End Tentang Sherly dan Daeng -->
+						
+						<!-- Begin RSVP Content -->
+						<section class="section-dark contact" id="rsvp">
+							<div class="container">
+								<div class="columns is-multiline">          
+									<div class="column is-12 prolog">
+										<h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">SOP MAJLIS</h1>
+									</div>
+									
+									<div class="column is-12 prolog has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+										<ul class="h2 subtitle">
+											<li>&#9679; Para jemputan yang hadir harus telah lengkap menerima dua dos vaksin.</li>
+											<li>&#9679; Para jemputan diwajibkan untuk mengesan suhu dan mengimbas kod QR MYSEJAHTERA lokasi majlis.</li>
+											<li>&#9679; Tetamu yang didapati bergejala dan suhu badan melebihi 37.5°C tidak dibenarkan memasuki majlis.</li>
+											<li>&#9679; Sentiasa memakai pelitup muka dan mengamalkan penjarakan sosial sepanjang majlis.</li>
+											<li>&#9679; Elakkan berjabat atau bersentuhan tangan dengan tuan rumah atau tetamu yang lain.</li><br>
+											Terima kasih di atas kerjasama.
+										</ul>
+										<br>
+										
+										<div class="column is-12 prolog">
+										<h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">RSVP</h1>
+									</div>
+										<strong>SILA RSVP MELALUI <i>Whatsapp</i> KEHADIRAN ANDA KEPADA PENGANTIN LELAKI ATAU PENGANTIN PEREMPUAN.<BR></strong>
+										<a href="https://api.whatsapp.com/send/?phone=601123744904&text=Assalmualaikum+Hisyam,+saya+hadir+/+tidak+dapat+hadir&app_absent=0" class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
+											<i class="fab fa-whatsapp"></i>
+											&nbsp;&nbsp;Pengantin Lelaki
+										</a>
+										
+										
+										
+										<a href="https://api.whatsapp.com/send/?phone=60102096967&text=Assalmualaikum+Syafiqa,+saya+hadir+/+tidak+dapat+hadir&app_absent=0" class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
+											<i class="fab fa-whatsapp"></i>
+											&nbsp;&nbsp;Pengantin Perempuan
+										</a >
+										<div class="space40px"></div>
+										
+										<div class="space40px"></div>
+										<div data-aos="fade-up" data-aos-easing="linear">
+											<img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
+										</div>
+										<div class="space10px"></div>
+										<p class="h2 subtitle" data-aos="fade-up" data-aos-easing="linear">
+											
+											
+											<!-- <a class="instagram":" href="https://instagram.com/nengchely" target="_blank" alt="Instagram Sherly">
+												<i class="fab fa-instagram"></i> @nengchely
+												</a>
+												&nbsp
+												<a class="instagram" href="https://instagram.com/daengdoang" target="_blank" alt="Instagram Daeng">
+												<i class="fab fa-instagram"></i> @daengdoang
+											</a>-->
+										</p>
+										
+									</div>
+									
+								</div>
+							</div>
+						</section>
+						<!-- End RSVP Content -->
+					</div>
+					<!-- End Main Content -->
+					
+					<!-- Begin Footer -->
+					<div class="footer">
+						<div class="container">
+							<a href="https://github.com/daengdoang/daeng-sherly-menikah" class="has-vertically-align">
+								<p class="has-vertically-align">2022 &copy Syafiqa-Hisyam</p>
+							</a>
+							<!--<a href="https://bulma.io" class="has-vertically-align">
+								<img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma">
+								</a>
+								<a href="https://www.netlify.com">
+								<img src="https://www.netlify.com/img/global/badges/netlify-color-bg.svg" alt="Deploy with Netlify"/>
+							</a>-->
+						</div>
+					</div>
+					<!-- End Footer -->
+					
+					<!-- Scripts -->
+					<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+					<script src="js/menikah.js"></script>
+					<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+					<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+					<script>
+						AOS.init({
+						easing: "ease-out",
+						duration: 800,
+						});
+					</script>
+					
+					
+				
+				</body>
+			</html>
+				
