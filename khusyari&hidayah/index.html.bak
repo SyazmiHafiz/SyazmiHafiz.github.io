@@ -5,9 +5,9 @@
 		<meta name="theme-color" content="#BC8887" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Undangan Majlis Kesyukuran Khusyari & Hidayah</title>
+		<title>Undangan Majlis Kesyukuran Noor Hayati & Zulkifli</title>
 		
-		<!--<meta property="og:title" content="Undangan Majlis Kesyukuran Khusyari & Hidayah">-->
+		<!--<meta property="og:title" content="Undangan Majlis Kesyukuran Noor Hayati & Zulkifli">-->
 		<meta property="og:description" content="Digital Card">
 		<!--<meta property="og:locale" content="id_ID" />-->
 		
@@ -101,16 +101,16 @@
 				<div class="hero-body">
 					<div class="container has-text-centered">
 						<h1 class="subtitle">UNDANGAN MAJLIS KESYUKURAN</h1><br>
-						<h2 class="title">Khusyari & Hidayah</h2>
+						<h2 class="title">Noor Hayati & Zulkifli</h2>
 						<h4 class="subtitle tempatwaktu">
 							
-							10 SEPTEMBER 2022, SABTU
+							3 MAC 2022, KHAMIS
 							</br>
-							502, Jalan Pantai
+							Lot 1362, Lorong Candan,
 							</br>
-							Kampung Sura Hujung, 23000, Dungun
+							Taman Wakaf Berangan, 16800 Pasir Puteh,
 							</br>
-							Terengganu
+							Kelantan
 							
 						</h4>
 					</div>
@@ -134,7 +134,7 @@
 							var year = now.getFullYear() + 1;
 							
 							var nextyear = month + '/' + day + '/' + year + ' 07:07:07';
-							var hari = '10/09/2022 12:00:00';
+							var hari = '03/03/2022 12:00:00';
 							
 							$('#hitungmundur').countdown({
 								date: hari, // TODO Date format: 07/27/2017 17:00:00
@@ -197,9 +197,9 @@
 				<p class="bodytext" data-aos="fade-up" data-aos-easing="linear">
 					Assalamu'alaikum Warahmatullahi Wabarakatuh.
 				</p><br />
-				<span class="space40px"><b>MUHAMAD KHUSYARI BIN TAIB</b></span>
+				<span class="space40px"><b>NOOR HAYATI BINTI SEMAN</b></span>
 				<span class="space40px"><b>&</b></span>
-					<span class="space40px"><b>NURUL NUR HIDAYAH BINTI MOHD NOOR</b></span>
+					<span class="space40px"><b>ZULKIFLI BIN HAMAT</b></span>
 					<p>
 						Dengan penuh kesyukuran ke hadrat Allah S.W.T dan seikhlas hati
 						<br />
@@ -212,11 +212,11 @@
 					
 					<div data-aos="fade-up" data-aos-easing="linear">
 						<div class="nama-lengkap" >
-							MUHAMAD KHUSYARI BIN TAIB
+							NOOR HAYATI BINTI SEMAN
 						</div>
 						<div class="ampersand">&</div>
 							<div class="nama-lengkap">
-								NURUL NUR HIDAYAH BINTI MOHD NOOR
+								ZULKIFLI BIN HAMAT
 							</div>
 							
 						</div>
@@ -241,9 +241,9 @@
 								class="column is-4 has-vertically-aligned-content">
 									
 									<p class="is-larger has-text-centered">
-										<div class="waktu tanggal-hari has-text-centered">Sabtu</div> 
-										<div class="waktu tanggal-angka has-text-centered">9</div>
-										<div class="waktu tanggal-bulan has-text-centered">September 2022</div>
+										<div class="waktu tanggal-hari has-text-centered">Khamis</div> 
+										<div class="waktu tanggal-angka has-text-centered">3</div>
+										<div class="waktu tanggal-bulan has-text-centered">Mac 2022</div>
 									</p>
 									
 								</div>
@@ -254,7 +254,7 @@
 									<h1 class="waktu is-larger has-text-centered">
 										Resepsi:
 										<br>
-										<strong>11:30AM  - 04:30PM</strong>
+										<strong>12:00PM  - 05:00PM</strong>
 									</h1>
 								</div>
 								
@@ -272,7 +272,7 @@
 						</div>
 						<div class="space40px"></div>
 						<div class="main-content has-text-centered" data-aos="fade-up" data-aos-easing="linear">
-							<a href="https://calendar.google.com/event?action=TEMPLATE&tmeid=MGdmc2Fkazg2b2NyZ3NoMnNtMWE1aDBqanAgc3lhem1paGFmaXo5N3hAbQ&tmsrc=syazmihafiz97x%40gmail.com" target="_blank" class="button has-tooltip btn-cta" data-tooltip="Add to Calendar" target="_blank" data-aos="zoom-in">
+							<a href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=NGgzdW00NG84dXFwMzcwNXYxbGliNGxzaWggZGFlbmdkb2FuZ0Bt&amp;tmsrc=daengdoang%40gmail.com" target="_blank" class="button has-tooltip btn-cta" data-tooltip="Add to Calendar" target="_blank" data-aos="zoom-in">
 								<i class="far fa-calendar-plus"></i>
 								&nbsp;&nbsp;Google Calendar
 							</a>
@@ -286,22 +286,22 @@
 							<div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
 								<h1 class="title has-text-centered section-title">Lokasi</h1>
 								<p class="tempat is-larger has-text-centered">
-									<strong>502, Jalan Pantai,</strong>
+									<strong>Lot 1362, Lorong Candan,</strong>
 									<br><strong>
-										Kampung Sura Hujung, 23000, Dungun,
+										Taman Wakaf Berangan, 16800 Pasir Puteh,
 									<br></strong>
 									<br><strong>
-									Terengganu
+									Kelantan
 									<br></strong>
 									
 								</p>
 							</div>
 							<div class="section-map" data-aos="fade-up" data-aos-easing="linear">
-								<iframe src="<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2578.2790260746124!2d103.43163672684574!3d4.726613285174591!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2f35fe3d1d5ce207!2zNMKwNDMnMzYuMiJOIDEwM8KwMjUnNTkuMSJF!5e0!3m2!1sen!2sus!4v1659247230549!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.1670258807226!2d102.3773161015575!3d5.832063089861276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5379992945c7ee25!2zNcKwNTAnMzIuNiJOIDEwMsKwMjMnMDUuNyJF!5e0!3m2!1sen!2smy!4v1644584932488!5m2!1sen!2smy" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 							</div>
 							<div class="space40px"></div>
 							<div class="has-text-centered" data-aos="fade-up" data-aos-easing="linear">
-								<a href="https://www.google.com/maps/place/4%C2%B043'36.2%22N+103%C2%B025'59.1%22E/@4.7264954,103.4320472,17.63z/data=!4m5!3m4!1s0x0:0x2f35fe3d1d5ce207!8m2!3d4.726716!4d103.433076?hl=en-US" class="button btn-cta" target="_blank" data-aos="zoom-in">
+								<a href="https://www.google.com/maps/place/5%C2%B050'32.6%22N+102%C2%B023'05.7%22E/@5.8320631,102.3773161,17z/data=!4m5!3m4!1s0x0:0x5379992945c7ee25!8m2!3d5.8424006!4d102.3849106?hl=en" class="button btn-cta" target="_blank" data-aos="zoom-in">
 									<i class="far fa-directions"></i>
 									&nbsp;&nbsp;Google Maps
 								</a>
@@ -335,16 +335,16 @@
 										<h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">RSVP</h1>
 									</div>
 										<strong>SILA RSVP MELALUI <i>Whatsapp</i> KEHADIRAN ANDA KEPADA :<BR></strong>
-										<a href="https://api.whatsapp.com/send/?phone=60168524895&text=Assalmualaikum+Tie,+saya+hadir+/+tidak+dapat+hadir&app_absent=0" class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
+										<a href="https://api.whatsapp.com/send/?phone=60139626185&text=Assalmualaikum+Tie,+saya+hadir+/+tidak+dapat+hadir&app_absent=0" class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
 											<i class="fab fa-whatsapp"></i>
-											&nbsp;&nbsp;Saiful
+											&nbsp;&nbsp;Tie
 										</a>
 										
 										
 										
-										<a href="https://api.whatsapp.com/send/?phone=60172186963&text=Assalmualaikum+Eha,+saya+hadir+/+tidak+dapat+hadir&app_absent=0" class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
+										<a href="https://api.whatsapp.com/send/?phone=601119724890&text=Assalmualaikum+Eha,+saya+hadir+/+tidak+dapat+hadir&app_absent=0" class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
 											<i class="fab fa-whatsapp"></i>
-											&nbsp;&nbsp;Fatimah
+											&nbsp;&nbsp;Eha
 										</a >
 										<div class="space40px"></div>
 										
@@ -378,7 +378,7 @@
 					<div class="footer">
 						<div class="container">
 							<a href="https://github.com/daengdoang/daeng-sherly-menikah" class="has-vertically-align">
-								<p class="has-vertically-align">2022 &copy Khusyari&Hidayah</p>
+								<p class="has-vertically-align">2022 &copy NoorHayati-Zulkifli</p>
 							</a>
 							<!--<a href="https://bulma.io" class="has-vertically-align">
 								<img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma">
