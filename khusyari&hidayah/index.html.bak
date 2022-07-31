@@ -101,7 +101,9 @@
 				<div class="hero-body">
 					<div class="container has-text-centered">
 						<h1 class="subtitle">UNDANGAN MAJLIS KESYUKURAN</h1><br>
-						<h2 class="title">Khusyari & Hidayah</h2>
+						<h2 class="title">Khusyari</h2>
+						<h2 class="title">&</h2>
+						<h2 class="title">Hidayah</h2>
 						<h4 class="subtitle tempatwaktu">
 							
 							10 SEPTEMBER 2022, SABTU
@@ -403,6 +405,7 @@
 						});
 					</script>
 					
+
 					
 				
 				</body>
