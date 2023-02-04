@@ -1,0 +1,75 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wedding Template</title>
+  <style>
+
+    .center{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Style the button */
+    button {
+      background-color: white;
+      color: black;
+      border: 2px solid #4caf50;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 18px;
+      padding: 12px 32px;
+      position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+      
+    }
+
+    button:hover {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    /* Style the song player */
+    audio {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="center">
+  <button onclick="playSong()">Buka</button>
+  <br><br>
+</div>
+  <!-- The song player -->
+  <audio id="song" src="negara.mp3"></audio>
+  <script>
+    function playSong() {
+      var song = document.getElementById("song");
+      song.play();
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+

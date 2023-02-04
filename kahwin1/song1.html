@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Enter Page</title>
+    <style>
+      body {
+        height: 100vh;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        width: 80%;
+        text-align: center;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 18px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <p>Enter button to continue</p>
+        <button onclick="playMusic()">Enter</button>
+      </div>
+    </div>
+    <audio id="background_music" autoplay loop style="display: none;">
+      <source src="negara.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      window.onload = function() {
+        document.getElementById("myModal").style.display = "block";
+      }
+
+      function playMusic() {
+        document.getElementById("background_music");
+        background_music.play();
+        document.getElementById("myModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
