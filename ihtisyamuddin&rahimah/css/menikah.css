@@ -58,7 +58,7 @@ html {
   font-family: 'Rouge Script', sans-serif;
   font-weight: 700;
   transform: rotate(-2deg);
-  font-size: 5rem;
+  font-size: 4rem;
   padding-bottom: 5px;
   color: whitesmoke;
 }
@@ -211,6 +211,22 @@ html {
   padding: 0 0 0 0 ;
 }
 
+
+.map-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 aspect ratio (height/width) */
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
 .main-content .section-light {
   padding: 80px 40px;
 }
@@ -305,7 +321,7 @@ html {
 .nama-lengkap {
   font-family: 'EB Garamond', serif;
   color: #996E6D;
-  font-size: 3.0rem;
+  font-size: 2.0rem;
   letter-spacing: 0px;
   padding-bottom: 6px;
   line-height: 3.7rem;
