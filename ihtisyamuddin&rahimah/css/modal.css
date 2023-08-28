@@ -1,0 +1,17 @@
+.modal-content {
+  background-color: rgba(228, 191, 219, 0.95);
+  background-image: url(../../ihtisyamuddin&rahimah/image/1111.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+}
+    
+.modal-body {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .modal-footer button {
+    display: block;
+    margin: 0 auto;
+  }
