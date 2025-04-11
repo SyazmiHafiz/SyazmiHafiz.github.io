@@ -8,7 +8,6 @@
     <meta name="description" content="Do you wanna go out with me? A website to invite your lover for a date by Collegeek online learning platform."/>
     <meta name="keywords" content="Do you wanna go out with me,A website to invite your lover for a date,Collegeek,Collegeek.com,learning programing,programming tutorial,tools,Live_DHTML,Convertor,microprocessor"/>
     <link rel="stylesheet" href="./style.css">
-
     <!-- icons -->
     <link rel="apple-touch-icon" sizes="57x57" href="image/icons/favicon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="image/icons/favicon-60x60.png">
@@ -30,82 +29,80 @@
     <meta name="msapplication-config" content="image/icons/browserconfig.xml">
     <link rel="manifest" href="image/icons/manifest.json">
     <!-- icons -->
-
-    <!-- Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EWCZHDCG9"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+
       gtag('config', 'G-3EWCZHDCG9');
     </script>
   </head>
   <body>
-    <div id="ask" class="container">
-      <div>
-        <h1 class="header_text">Do you wanna go out with me?</h1>
-      </div>
-      <div class="gif_container">
-        <img src="image/ask.gif" alt="Cute animated illustration">
-      </div>
-      <div class="buttons">
-        <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
-        <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
-      </div>
-      <video id="novideo" width="0" height="0" controls>
-        <source src="image/SadMoment.mp4" type="video/mp4">
-      </video>
-    </div>
-
-    <div id="ans" class="container" style="display: none;">
-      <div>
-        <h1 class="header_text">Yeeeyyyy!!</h1>
-      </div>
-      <div class="gif_container">
-        <img src="image/ans.gif" alt="Cute animated illustration">
-      </div>
-      <div class="gif_container">
-        <button class="btn" onclick="openWhatsApp()">Send on WhatsApp</button>
-      </div>
-      <video id="ansvideo" width="0" height="0" controls>
-        <source src="image/KidsCheering.mp4" type="video/mp4">
-      </video>
-    </div>
-
+        <div id="ask" class="container">
+            <div >
+                <h1 class = "header_text">Do you wanna go out with me?</h1>
+            </div>
+            <div class="gif_container">
+                <img src="image/ask.gif" alt="Cute animated illustration">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+            </div>
+            <video id="novideo" width="0" height="0" controls>
+                <source src="image/SadMoment.mp4" 
+                   type="video/mp4">
+            </video>
+        </div>
+        <div id="ans" class="container">
+            <div >
+                <h1 class = "header_text">Yeeeyyyy!!</h1>
+            </div>
+            <div class="gif_container">
+                <img src="image/ans.gif" alt="Cute animated illustration">
+            </div>
+            <div class="gif_container qrimage">
+                <img src="image/siddharth_gabu_qr.png" onclick="window.open('https://www.instagram.com/siddharth_gabu/')" alt="Insta Profile QR code">
+            </div>
+            <video id="ansvideo" width="0" height="0" controls>
+                <source src="image/KidsCheering.mp4" 
+                   type="video/mp4">
+            </video>
+        </div>
+    </body> 
     <script>
-      var debounce = function(fn, t = 1000) {
-        let timer;
-        return function(...args) {
-          clearTimeout(timer);
-          timer = setTimeout(() => fn(...args), t);
+
+        var debounce = function(fn, t = 1000) {
+            let timer;
+            return function(...args) {
+                clearTimeout(timer);
+                timer = setTimeout(() => fn(...args), t);
+            }
+        };
+
+
+        function playAudio()
+        {
+            document.getElementById('novideo').play();
         }
-      };
 
-      function playAudio() {
-        document.getElementById('novideo').play();
-      }
+        function nextPage() {
+            //window.location.href = "yes.html";
+            document.getElementById('ans').style.display = 'block';
+            document.getElementById('ask').style.display = 'none';
+            document.getElementById('novideo').pause();
+            document.getElementById('ansvideo').play();
+        }
 
-      function nextPage() {
-        document.getElementById('ans').style.display = 'block';
-        document.getElementById('ask').style.display = 'none';
-        document.getElementById('novideo').pause();
-        document.getElementById('ansvideo').play();
-      }
+        function moveButton() {
+            var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+            var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+            document.getElementById('noButton').style.left = `${x}px`;
+            document.getElementById('noButton').style.top = `${y}px`;
+            playAudio();
+        }
 
-      function moveButton() {
-        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
-        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
-        document.getElementById('noButton').style.left = `${x}px`;
-        document.getElementById('noButton').style.top = `${y}px`;
-        playAudio();
-      }
-
-      function openWhatsApp() {
-        const number = '601119325689';
-        const message = encodeURIComponent("I do want to go on a date with you!");
-        const url = `https://wa.me/${number}?text=${message}`;
-        window.open(url, '_blank');
-      }
-    </script>
-  </body>
+    </script> 
 </html>
