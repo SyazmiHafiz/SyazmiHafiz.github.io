@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -22,9 +22,14 @@
       font-size: 3em;
       margin-bottom: 0.5em;
     }
-    p {
+    .slider {
       font-size: 1.5em;
       margin-bottom: 1em;
+      max-width: 80%;
+      min-height: 4em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .heart {
       color: red;
@@ -43,11 +48,43 @@
 </head>
 <body>
   <h1>I'm Sorry</h1>
-  <p>I didn't mean to hurt you.</p>
+  <div class="slider" id="slider">Aku sangat menyesal telah menyakitimu.</div>
   <div class="heart">❤️</div>
   <audio autoplay loop>
     <source src="your-song.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
+    Browser Anda tidak mendukung elemen audio.
   </audio>
+  <script>
+    const messages = [
+      "Aku sangat menyesal telah menyakitimu.",
+      "Maafkan aku karena membuatmu kecewa.",
+      "Aku tahu aku telah membuatmu marah, tapi tolong beri aku kesempatan untuk memperbaikinya.",
+      "Aku tahu aku tidak sempurna, tapi aku janji akan berusaha menjadi yang terbaik untukmu.",
+      "Aku minta maaf jika kata-kataku telah melukai perasaanmu.",
+      "Aku bodoh karena telah menyakiti orang yang sangat ku sayangi.",
+      "Tolong terima permintaan maafku dan biarkan aku memperbaiki segala kesalahan yang telah aku lakukan.",
+      "Saya sangat menyesal dan tidak bermaksud untuk menyakiti hatimu.",
+      "Aku minta maaf, tolong berikan aku kesempatan kedua.",
+      "Aku sangat menyesali sikapku. Jangan tinggalkan aku.",
+      "Maafkan semua kesalahanku dan biarkan aku mengganti kesalahanku dengan cinta dan perhatian.",
+      "Aku minta maaf karena tidak memahami perasaanmu dengan baik.",
+      "Aku mendambakan kebahagiaan kita, tolong berikan aku kesempatan untuk memperbaiki semuanya.",
+      "Aku sungguh menyesal telah membuatmu terluka, tolong beri aku kesempatan untuk memperbaikinya.",
+      "Maafkan aku karena telah mengabaikanmu, kamu adalah hal terpenting dalam hidupku.",
+      "Aku tidak bisa hidup tanpamu, maafkan aku.",
+      "Maaf jika aku terlalu membebani dirimu dengan masalahku.",
+      "Maaf jika terkadang aku terlalu keras kepala dan tidak mendengarkanmu.",
+      "Saya menyesal telah membuatmu khawatir karena tindakan bodohku.",
+      "Maafkan saya jika aku seringkali tidak berterima kasih atas semua yang kamu berikan padaku.",
+      "Saya minta maaf jika terkadang aku egois dan tidak memikirkan kebutuhanmu.",
+      "Maaf jika terkadang aku terlalu emosional dan tidak bisa mengendalikan diri."
+    ];
+    let index = 0;
+    const slider = document.getElementById('slider');
+    setInterval(() => {
+      index = (index + 1) % messages.length;
+      slider.textContent = messages[index];
+    }, 4000);
+  </script>
 </body>
 </html>
