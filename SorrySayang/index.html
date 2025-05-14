@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Maafkan Ayang</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+
   <style>
     body {
       margin: 0;
@@ -44,16 +48,47 @@
     audio {
       display: none;
     }
+    .modal-content {
+      background-color: rgba(255, 240, 245, 0.95);
+      color: #4a148c;
+    }
+    #playBtn {
+      background-color: #bc8887;
+      color: white;
+      font-weight: bold;
+    }
   </style>
 </head>
-<body>
+<body onload="$('#musicModal').modal('show')">
+
+  <!-- Modal -->
+  <div class="modal fade" id="musicModal" tabindex="-1" role="dialog" aria-labelledby="musicModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content p-4">
+        <div class="modal-header border-0">
+          <h5 class="modal-title w-100 text-center" id="musicModalLabel">Maaf Sayang</h5>
+        </div>
+        <div class="modal-body">
+          <p>Ayang ada sesuatu untuk sayang ❤️</p>
+          <button id="playBtn" class="btn btn-lg btn-block mt-3" onclick="playMusic()">Maaf Sayang</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kandungan utama -->
   <h1>Maafkan Ayang</h1>
   <div class="slider" id="slider">Ayang betul-betul minta maaf, sayang.</div>
   <div class="heart">❤️</div>
-  <audio autoplay loop>
-    <source src="music1.mp3" type="audio/mpeg">
-    Pelayar anda tidak menyokong elemen audio.
-  </audio>
+
+  <!-- Audio (hidden) -->
+  <audio id="bgMusic" src="music1.mp3" loop></audio>
+
+  <!-- JS Libraries -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script -->
   <script>
     const messages = [
       "Ayang betul-betul minta maaf, sayang.",
@@ -77,12 +112,19 @@
       "Ayang minta maaf jika ayang kadang-kadang mementingkan diri sendiri dan tidak memikirkan keperluan sayang.",
       "Maaf ayang."
     ];
+
     let index = 0;
     const slider = document.getElementById('slider');
     setInterval(() => {
       index = (index + 1) % messages.length;
       slider.textContent = messages[index];
     }, 4000);
+
+    function playMusic() {
+      var audio = document.getElementById('bgMusic');
+      audio.play();
+      $('#musicModal').modal('hide');
+    }
   </script>
 </body>
 </html>
