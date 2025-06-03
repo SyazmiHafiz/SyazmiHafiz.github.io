@@ -9,6 +9,11 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Removes extra space below inline images and allows margin auto for centering */
+}
 html {
   font-family: 'Raleway', Tahoma, sans-serif;
   width: 100%;
@@ -22,10 +27,10 @@ html {
 .navbar-item {
   line-height: 38px;
   font-weight: 600;
-  text-transform: ;
+  text-transform: none;
   letter-spacing: 1px;
   font-size: 1rem;
-  box-shadow:  ;
+  box-shadow: none;
 }
 
 .navbar-item.is-active{
@@ -40,7 +45,7 @@ html {
 
 
 .hero {
-  background-image: linear-gradient(rgba(15, 2, 2, 0.2), rgba(48, 47, 47, 0.9)), url("../image/444.jpeg");
+  background-image: linear-gradient(rgba(15, 2, 2, 0.2), rgba(48, 47, 47, 0.9)), url("../image/44.jpeg");
   height: 100%; 
   background-size: cover;
   background-repeat:no-repeat;
@@ -95,7 +100,7 @@ html {
 .hero .hero-foot .hero-foot--wrapper .hero-menu-desktop {
   line-height: 38px;
   font-weight: 600;
-  text-transform: ;
+  text-transform: none;
   letter-spacing: 1px;
   font-size: 1rem;
 }
@@ -197,6 +202,7 @@ html {
   border-radius: 5px;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   box-shadow: 0 5px 20px rgba(14, 25, 80, 0.3);
 }
 
@@ -339,7 +345,6 @@ vertical-align: middle;
 .tempat {
   font-size: 1.4rem;
   font-family: 'Raleway', sans-serif;
-  font-size: ;
   margin-bottom: 50px;
 }
 
@@ -597,9 +602,9 @@ body.preloader-site {
 
 .section-light {
   background-image: url(../image/divider-flowers-leaves.png);
-  background-position: bottom -30px center;
+  background-position: bottom center;
   background-repeat: no-repeat;
-  background-size: initial;
+  background-size: auto 80px;
 }
 
 .instagram {
@@ -611,4 +616,232 @@ body.preloader-site {
   vertical-align: middle;
   text-align: center;
   padding: 10px;
+}
+
+/* ==========================================================================
+   Responsive Design Adjustments
+   ========================================================================== */
+
+/* Tablets and Small Desktops (Portrait and Landscape) */
+@media (max-width: 1023px) {
+  .hero .title {
+    font-size: 4rem; /* Slightly smaller title */
+  }
+
+  .hero .subtitle, .hero .tempatwaktu {
+    font-size: 1.2rem;
+    padding: 25px;
+  }
+
+  .nama-lengkap {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .ampersand {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  .tanggal-angka {
+    font-size: 4rem;
+  }
+
+  .main-content .section-dark,
+  .main-content .section-darker,
+  .main-content .section-light,
+  .main-content .section-cashbac {
+    padding: 60px 30px;
+  }
+
+  .main-content .section-color.pertanyaan {
+    padding: 80px 30px;
+  }
+
+  .main-content .section-light.skills {
+    padding: 60px 30px;
+  }
+}
+
+/* Mobile Devices (Portrait and Landscape) */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 20rem;
+  }
+
+  .hero .title {
+    font-size: 3rem; /* Smaller title for mobile */
+  }
+
+  .hero .subtitle, .hero .tempatwaktu {
+    font-size: 1.1rem; /* Smaller subtitle for mobile */
+    padding: 20px;
+  }
+  
+  .hero .tempatwaktu {
+    padding-top: 20px;
+  }
+
+  .navbar-item {
+    font-size: 0.9rem;
+  }
+
+  .main-content .section-title {
+    font-size: 1.3rem;
+    padding-bottom: 40px;
+  }
+
+  .nama-lengkap {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .ampersand {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  .bodytext {
+    font-size: 16px;
+  }
+
+  .waktu {
+    font-size: 1.2rem;
+  }
+
+  .tanggal-angka {
+    font-size: 3.5rem;
+  }
+
+  .tempat {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+
+  .main-content .section-dark,
+  .main-content .section-darker,
+  .main-content .section-light,
+  .main-content .section-cashbac {
+    padding: 40px 20px;
+  }
+  
+  .main-content .section-dark.resume {
+    padding-top: 50px; /* Consolidating from existing rule */
+    height: auto; /* Allow height to adjust */
+  }
+
+  .main-content .section-dark.resume button {
+    width: 200px;
+    height: 45px;
+    font-size: 0.9rem;
+  }
+
+  .main-content .section-dark.foto-foto {
+     padding: 50px 15px; /* Consolidating from existing rule */
+  }
+
+  .main-content .section-light.skills {
+    padding: 40px 15px; /* Consolidating from existing rule */
+  }
+
+  .main-content .section-light.contact {
+    padding: 60px 20px; /* Consolidating from existing rule */
+  }
+  
+  .main-content .section-light.contact button {
+    font-size: 1rem;
+  }
+
+  .main-content .section-color.pertanyaan {
+    padding: 60px 20px;
+  }
+
+  .main-content .section-color.pertanyaan i {
+    font-size: 2.5rem;
+    padding: 15px;
+  }
+
+  .btn-whatsapp, .btn-cta {
+    width: 180px;
+    height: 55px;
+    font-size: 1rem;
+    margin: 0.5rem;
+  }
+  
+  .btn-whatsapp:hover, .btn-cta:hover {
+    width: 180px;
+    height: 55px;
+    font-size: 1rem;
+  }
+
+  .button-download {
+    min-width: 180px;
+    height: 50px;
+  }
+
+  .voucher-code {
+    height: 50px;
+    max-width: 150px;
+    font-size: 20px;
+    padding: 12px;
+  }
+
+  .btn-voucher-code {
+    height: 50px;
+    min-width: 90px;
+    font-size: 18px;
+  }
+
+  .footer p {
+    font-size: 9pt;
+  }
+
+  .footer img {
+    max-height: 20px;
+  }
+
+  .title-foto {
+    font-size: 16pt;
+  }
+
+  .subtitle-foto {
+    font-size: 12pt;
+  }
+  
+  .instagram {
+    font-size: 1.1rem;
+  }
+}
+
+/* Very Small Mobile Devices (Portrait) */
+@media (max-width: 400px) {
+  .hero .title {
+    font-size: 2.5rem;
+  }
+
+  .hero .subtitle, .hero .tempatwaktu {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .nama-lengkap {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+
+  .ampersand {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+
+  .tanggal-angka {
+    font-size: 3rem;
+  }
+  
+  .btn-whatsapp, .btn-cta,
+  .btn-whatsapp:hover, .btn-cta:hover {
+    width: 100%; /* Full width buttons for very small screens */
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
