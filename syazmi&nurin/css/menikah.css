@@ -845,3 +845,35 @@ body.preloader-site {
     margin-right: 0;
   }
 }
+
+/* Styles for the Buka Modal Button */
+.btn-buka-modal {
+  background-color: #BC8887 !important; /* dusty-pink-darker, !important to override Bootstrap if needed */
+  border-color: #996E6D !important; /* dusty-pink-darkest, !important to override Bootstrap if needed */
+  color: white !important; /* Ensure text is white */
+  padding: 10px 25px; /* Adjust padding for a nice size */
+  font-size: 1.1rem; /* Slightly larger font size, can be adjusted */
+  font-weight: bold;
+  border-radius: 20px; /* Rounded corners */
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase; /* Optional: for a more styled look */
+  letter-spacing: 0.5px; /* Optional: for a more styled look */
+  /* font-family is intentionally omitted to inherit from existing styles */
+}
+
+.btn-buka-modal:hover,
+.btn-buka-modal:focus {
+  background-color: #996E6D !important; /* dusty-pink-darkest on hover */
+  border-color: #BC8887 !important;
+  color: white !important;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px); /* Slight lift effect */
+}
+
+.btn-buka-modal:active {
+  background-color: #8a605f !important; /* Darker shade for active state */
+  border-color: #8a605f !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+}
