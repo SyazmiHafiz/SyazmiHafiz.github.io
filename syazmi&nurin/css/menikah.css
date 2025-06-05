@@ -45,7 +45,7 @@ html {
 
 
 .hero {
-  background-image: linear-gradient(rgba(15, 2, 2, 0.2), rgba(48, 47, 47, 0.9)), url("../image/44.jpeg");
+  background-image: linear-gradient(rgba(15, 2, 2, 0.2), rgba(48, 47, 47, 0.9)), url("../image/bunga2.jpg");
   height: 100%; 
   background-size: cover;
   background-repeat:no-repeat;
@@ -846,34 +846,61 @@ body.preloader-site {
   }
 }
 
-/* Styles for the Buka Modal Button */
+
+/* Font keseluruhan modal */
+.modal-content {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Tajuk utama (contoh: UNDANGAN MAJLIS PERKAHWINAN) */
+.modal-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #7b3f3f;
+}
+
+/* Nama pengantin */
+.modal-body h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 42px;
+  color: #a75554;
+  margin-top: 10px;
+}
+
+/* Butang buka - tiada perubahan font jika nak kekalkan gaya bold-uppercase */
 .btn-buka-modal {
-  background-color: #BC8887 !important; /* dusty-pink-darker, !important to override Bootstrap if needed */
-  border-color: #996E6D !important; /* dusty-pink-darkest, !important to override Bootstrap if needed */
-  color: white !important; /* Ensure text is white */
-  padding: 10px 25px; /* Adjust padding for a nice size */
-  font-size: 1.1rem; /* Slightly larger font size, can be adjusted */
+  background-color: #f8b4c2 !important; /* pink cerah */
+  border-color: #f8b4c2 !important;
+  color: white !important;
+  padding: 10px 25px;
+  font-size: 1.1rem;
   font-weight: bold;
-  border-radius: 20px; /* Rounded corners */
-  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: 'Poppins', sans-serif;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-  text-transform: uppercase; /* Optional: for a more styled look */
-  letter-spacing: 0.5px; /* Optional: for a more styled look */
-  /* font-family is intentionally omitted to inherit from existing styles */
 }
 
 .btn-buka-modal:hover,
 .btn-buka-modal:focus {
-  background-color: #996E6D !important; /* dusty-pink-darkest on hover */
-  border-color: #BC8887 !important;
+  background-color: #f48fa2 !important; /* pink lebih gelap sikit on hover */
+  border-color: #f48fa2 !important;
   color: white !important;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-  transform: translateY(-1px); /* Slight lift effect */
+  transform: translateY(-1px);
 }
 
-.btn-buka-modal:active {
-  background-color: #8a605f !important; /* Darker shade for active state */
-  border-color: #8a605f !important;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  transform: translateY(0);
+
+.modal-content {
+  border-radius: 20px;
+  background-color: #fffaf7;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header, .modal-body, .modal-footer {
+  border: none;
+  text-align: center;
 }
