@@ -55,3 +55,35 @@ $(window).load(function() {
   var Body = $("body");
   Body.addClass("preloader-site");
 });
+
+// Autoscroll
+var scrollInterval;
+var isScrolling = false;
+
+function startScrolling() {
+  if (isScrolling) return;
+  isScrolling = true;
+  scrollInterval = setInterval(function() {
+    window.scrollBy(0, 1);
+  }, 20);
+}
+
+function stopScrolling() {
+  if (!isScrolling) return;
+  isScrolling = false;
+  clearInterval(scrollInterval);
+}
+
+// Start scrolling when the page loads
+$(document).ready(function() {
+  setTimeout(startScrolling, 3000); // Start after 3 seconds to allow user to see the top
+});
+
+// Stop scrolling on user interaction
+$(window).on('scroll wheel DOMMouseScroll mousewheel keyup touchmove', function(e) {
+  if ( e.type === 'scroll' ) {
+    // Let the native scroll happen
+  } else {
+    stopScrolling();
+  }
+});
