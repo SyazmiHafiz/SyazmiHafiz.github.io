@@ -281,52 +281,63 @@
 					</section>
 					<!-- End Lokasi Content -->
 						<section class="section-dark contact" id="rsvp">
-							<div class="container">
-								<div class="columns is-multiline">          
-									
-									<div class="column is-12 prolog has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+					<div class="container">
+						<div class="columns is-centered">
+						<div class="column is-8 has-text-centered">
+							<h1 class="title section-title">RSVP</h1>
+							<p class="subtitle">Sila isi borang di bawah untuk maklumkan kehadiran anda</p>
 
-										<br>
-										
-										<div class="column is-12 prolog">
-										<h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">RSVP</h1>
-									</div>
-										<strong>SILA RSVP MELALUI <i>Whatsapp</i> KEHADIRAN ANDA KEPADA PENGANTIN LELAKI ATAU PENGANTIN PEREMPUAN.<BR></strong>
-										<a href="https://api.whatsapp.com/send/?phone=601119325689&text=Assalamualaikum+Syazmi,+saya+hadir+/+tidak+dapat+hadir&app_absent=0" class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
-											<i class="fab fa-whatsapp"></i>
-											&nbsp;&nbsp;Pengantin Lelaki
-										</a>
-										
-										
-										
-										<a href="https://api.whatsapp.com/send/?phone=601110746515&text=Assalamualaikum+Nurin,+saya+hadir+/+tidak+dapat+hadir&app_absent=0" class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
-											<i class="fab fa-whatsapp"></i>
-											&nbsp;&nbsp;Pengantin Perempuan
-										</a >
-										<div class="space40px"></div>
-										
-										<div class="space40px"></div>
-										<div data-aos="fade-up" data-aos-easing="linear">
-											<img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
-										</div>
-										<div class="space10px"></div>
-										<p class="h2 subtitle" data-aos="fade-up" data-aos-easing="linear">
-											
-											
-											<!-- <a class="instagram":" href="https://instagram.com/nengchely" target="_blank" alt="Instagram Sherly">
-												<i class="fab fa-instagram"></i> @nengchely
-												</a>
-												&nbsp
-												<a class="instagram" href="https://instagram.com/daengdoang" target="_blank" alt="Instagram Daeng">
-												<i class="fab fa-instagram"></i> @daengdoang
-											</a>-->
-										</p>
-										
-									</div>
-									
+							<form action="https://formsubmit.co/syazmihafiz97x@gmail.com" method="POST" class="box" style="background-color: #fffaf7; border-radius: 12px; padding: 2rem;">
+
+							<div class="field">
+								<label class="label">Nama Penuh</label>
+								<div class="control">
+								<input class="input" type="text" name="Nama" placeholder="Contoh: Ali Bin Abu" required>
 								</div>
 							</div>
-						</section>
+
+							<div class="field">
+								<label class="label">Adakah anda akan hadir?</label>
+								<div class="control">
+								<div class="select is-fullwidth">
+									<select name="Kehadiran" required>
+									<option value="">Sila Pilih</option>
+									<option value="Akan Hadir">Akan Hadir</option>
+									<option value="Tidak Dapat Hadir">Tidak Dapat Hadir</option>
+									</select>
+								</div>
+								</div>
+							</div>
+
+							<div class="field">
+								<label class="label">Bilangan Kehadiran</label>
+								<div class="control">
+								<input class="input" type="number" name="Jumlah" min="1" max="10" placeholder="Contoh: 2" required>
+								</div>
+							</div>
+
+							<div class="field">
+								<label class="label">Ucapan (jika ada)</label>
+								<div class="control">
+								<textarea class="textarea" name="Ucapan" placeholder="Ucapan ringkas anda kepada pengantin..."></textarea>
+								</div>
+							</div>
+
+							<!-- Settings for FormSubmit -->
+							<input type="hidden" name="_captcha" value="false">
+							<input type="hidden" name="_next" value="https://syazmi.com/thankyou.html">
+							
+							<div class="field is-grouped is-grouped-centered">
+								<div class="control">
+								<button class="button btn-cta" type="submit">Hantar RSVP</button>
+								</div>
+							</div>
+
+							</form>
+						</div>
+						</div>
+					</div>
+					</section>
 						<!-- End RSVP Content -->
 					</div>
 					<!-- End Main Content -->			
