@@ -350,23 +350,23 @@
 						</section>
 
 						<script>
-						fetch("https://script.google.com/macros/s/AKfycbzBhepWHpxegCv8XDBUXixYq2TVy8w7LoJfGkaApjIqPBtsafvUbn-n1zg3lERVWHcf/exec")
-						.then(res => res.json())
-						.then(data => {
-							let html = '';
-							data.forEach(item => {
-							if (item.ucapan && item.ucapan.trim() !== "") {
-								html += `
-								<div class="box" style="margin-bottom: 1rem;">
-									<strong>${item.nama}</strong> (${item.jumlah} orang):<br>
-									<em>"${item.ucapan}"</em>
-								</div>
-								`;
-							}
+							fetch("https://script.google.com/macros/s/AKfycbzBhepWHpxegCv8XDBUXixYq2TVy8w7LoJfGkaApjIqPBtsafvUbn-n1zg3lERVWHcf/exec")
+							.then(res => res.json())
+							.then(data => {
+								let html = '';
+								data.forEach(item => {
+								if (item.ucapan && item.ucapan.trim() !== "") {
+									html += `
+									<div class="box" style="margin-bottom: 1rem;">
+										<strong>${item.nama}</strong>:<br>
+										<em>"${item.ucapan}"</em>
+									</div>
+									`;
+								}
+								});
+								document.getElementById("ucapan-list").innerHTML = html || "<p>Tiada ucapan lagi.</p>";
 							});
-							document.getElementById("ucapan-list").innerHTML = html || "<p>Tiada ucapan lagi.</p>";
-						});
-						</script>
+							</script>
 					</div>
 					<!-- End Main Content -->			
 					<!-- Begin Footer -->
