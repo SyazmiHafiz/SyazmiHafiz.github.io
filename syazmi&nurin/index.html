@@ -341,6 +341,32 @@
 					</div>
 					</section>
 						<!-- End RSVP Content -->
+
+						<section class="section-light" id="ucapan">
+						<div class="container">
+							<h2 class="title has-text-centered">Ucapan Tetamu</h2>
+							<div id="ucapan-list" class="content"></div>
+						</div>
+						</section>
+
+						<script>
+						fetch("https://script.google.com/macros/s/AKfxxxxx.../exec")
+						.then(res => res.json())
+						.then(data => {
+							let html = '';
+							data.forEach(item => {
+							if (item.ucapan && item.ucapan.trim() !== "") {
+								html += `
+								<div class="box" style="margin-bottom: 1rem;">
+									<strong>${item.nama}</strong> (${item.jumlah} orang):<br>
+									<em>"${item.ucapan}"</em>
+								</div>
+								`;
+							}
+							});
+							document.getElementById("ucapan-list").innerHTML = html || "<p>Tiada ucapan lagi.</p>";
+						});
+						</script>
 					</div>
 					<!-- End Main Content -->			
 					<!-- Begin Footer -->
