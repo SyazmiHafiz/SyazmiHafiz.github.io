@@ -87,3 +87,20 @@ $(window).on('scroll wheel DOMMouseScroll mousewheel keyup touchmove', function(
     stopScrolling();
   }
 });
+
+// Floating bubbles/stars effect
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.getElementById("bubbles-container");
+
+  if (container) {
+    for (let i = 0; i < 30; i++) {
+      const bubble = document.createElement("div");
+      bubble.classList.add("bubble");
+      bubble.style.left = Math.random() * 100 + "vw";
+      bubble.style.width = bubble.style.height = Math.random() * 8 + 5 + "px";
+      bubble.style.animationDuration = (Math.random() * 5 + 6) + "s";
+      bubble.style.animationDelay = (Math.random() * 5) + "s";
+      container.appendChild(bubble);
+    }
+  }
+});
