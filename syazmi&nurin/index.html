@@ -405,10 +405,11 @@
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-						easing: "ease-out",
-						duration: 800,
-						});
+		AOS.init({
+		  easing: "ease-out",
+		  duration: 800,
+		  once: false // ⚠️ ini penting untuk animasi berulang bila scroll
+		});
 
         function playMusic() {
           document.getElementById("background_music");
