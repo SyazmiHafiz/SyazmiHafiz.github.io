@@ -975,8 +975,8 @@ body.preloader-site {
 .bubble {
   position: absolute;
   bottom: -100px;
-  width: 15px;
-  height: 15px;
+  width: 25px;
+  height: 25px;
   background: rgba(255, 192, 203, 0.4);
   border-radius: 50%;
   animation: rise 10s linear infinite;
