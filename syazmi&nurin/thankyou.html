@@ -4,54 +4,89 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terima Kasih!</title>
-  <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
-  <meta http-equiv="refresh" content="6;url=index.html" />
+  <meta http-equiv="refresh" content="3;url=index.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.4/css/bulma.min.css" />
   <style>
-    body {
+    html, body {
       background-color: #fffaf7;
       font-family: 'Playfair Display', serif;
       color: #996E6D;
-      padding: 3rem 1rem;
+      height: 100%;
+      margin: 0;
+      padding: 0;
     }
 
-    .box {
-      max-width: 600px;
-      margin: auto;
-      padding: 3rem;
-      border-radius: 15px;
+    .thankyou-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      background-color: #fffaf7;
+    }
+
+    .thankyou-box {
       background-color: #ffffff;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      padding: 3rem 2rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
     }
 
     h1.title {
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-bottom: 1rem;
+      font-weight: 700;
     }
 
     p.subtitle {
       font-size: 1.2rem;
+      font-family: 'Open Sans', sans-serif;
       margin-bottom: 2rem;
     }
 
     a.button {
       background-color: #996E6D;
-      border-color: transparent;
+      border: none;
       color: white;
       font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
     }
 
     a.button:hover {
       background-color: #bf7877;
     }
+
+    @media (max-width: 768px) {
+      .thankyou-box {
+        padding: 2rem 1.5rem;
+      }
+
+      h1.title {
+        font-size: 1.8rem;
+      }
+
+      p.subtitle {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="box has-text-centered">
-    <h1 class="title">Terima kasih atas RSVP anda!</h1>
-    <p class="subtitle">Kami amat menghargainya. Jumpa anda di majlis, insyaAllah.</p>
-    <a href="index.html" class="button is-primary">Kembali ke Laman</a>
-    <p style="margin-top: 1rem; font-size: 0.9rem; color: #aaa;">
-    </p>
+  <div class="thankyou-container">
+    <div class="thankyou-box">
+      <h1 class="title">Terima kasih atas maklum balas anda</h1>
+      <p class="subtitle">Kami sangat menghargainya. Semoga segala urusan anda diberkati.</p>
+      <a href="index.html" class="button">Kembali ke Laman</a>
+    </div>
   </div>
 </body>
 </html>
