@@ -296,7 +296,7 @@
 							<h1 class="title section-title">RSVP</h1>
 							<p class="subtitle">Sila isi borang di bawah untuk maklumkan kehadiran anda</p>
 
-							<form action="https://script.google.com/macros/s/AKfycbyvpbgBGPo9btyrkSgXjvqKHi2QckntkJz8S1shBPmNhtwFnmkAR6FVL8rLgfQFQK2e/exec"  method="POST" class="box" style="background-color: #fffaf7; border-radius: 12px; padding: 2rem;">
+							<form id="rsvpForm" class="box" style="background-color: #fffaf7; border-radius: 12px; padding: 2rem;">
 
 							<div class="field">
 								<label class="label">Nama Penuh</label>
@@ -334,7 +334,7 @@
 
 							<!-- Settings for FormSubmit -->
 							<input type="hidden" name="_captcha" value="false">
-							<input type="hidden" name="_next" value="https://syazmi.com/syazmi&nurin/thankyou.html">
+							<input type="hidden" value="https://syazmi.com/syazmi&nurin/thankyou.html">
 							
 							<div class="field is-grouped is-grouped-centered">
 								<div class="control">
@@ -357,23 +357,30 @@
 						</section>
 
 						<script>
-							fetch("https://script.google.com/macros/s/AKfycbxfPb5Mq_Xz8z4i6cEvC8J6dU3AxpPTgm2GUMLYWXisKF5Scv6yxDqa8FDnEtMDVzSl/exec")
-							.then(res => res.json())
-							.then(data => {
-								let html = '';
-								data.forEach(item => {
-								if (item.ucapan && item.ucapan.trim() !== "") {
-									html += `
-									<div class="box has-text-centered" style="margin-bottom: 1rem;">
-										<strong>${item.nama}</strong><br>
-										<em>"${item.ucapan}"</em>
-									</div>
-									`;
+							document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+								e.preventDefault(); // hentikan submit asal
+
+								const form = e.target;
+								const data = new FormData(form);
+
+								fetch('https://script.google.com/macros/s/AKfycbxfPb5Mq_Xz8z4i6cEvC8J6dU3AxpPTgm2GUMLYWXisKF5Scv6yxDqa8FDnEtMDVzSl/exec', {
+								method: 'POST',
+								body: data
+								})
+								.then(response => {
+								if (response.ok) {
+									// Redirect ke halaman terima kasih
+									window.location.href = "https://syazmi.com/syazmi&nurin/thankyou.html";
+								} else {
+									alert("Ada masalah hantar RSVP. Sila cuba lagi.");
 								}
+								})
+								.catch(error => {
+								console.error('Error:', error);
+								alert("Ralat berlaku. Sila cuba semula.");
 								});
-								document.getElementById("ucapan-list").innerHTML = html || "<p>Tiada ucapan lagi.</p>";
-							});
-							</script>
+						});
+						</script>
 					</div>
 					<!-- End Main Content -->			
 					<!-- Begin Footer -->
