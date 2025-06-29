@@ -296,9 +296,8 @@
 							<h1 class="title section-title">RSVP</h1>
 							<p class="subtitle">Sila isi borang di bawah untuk maklumkan kehadiran anda</p>
 
-							<form action="https://formsubmit.co/syazmi.97vw5a@zapiermail.com" method="POST" class="box" style="background-color: #fffaf7; border-radius: 12px; padding: 2rem;">
-
-							<div class="field">
+							<!-- <form action="https://formsubmit.co/syazmi.97vw5a@zapiermail.com" method="POST" class="box" style="background-color: #fffaf7; border-radius: 12px; padding: 2rem;"> -->
+							<form id="rsvp-form">
 								<label class="label">Nama Penuh</label>
 								<div class="control">
 								<input class="input" type="text" name="Nama" placeholder="Contoh: Ali Bin Abu" required>
@@ -357,23 +356,32 @@
 						</section>
 
 						<script>
-							fetch("https://script.google.com/macros/s/AKfycbzBhepWHpxegCv8XDBUXixYq2TVy8w7LoJfGkaApjIqPBtsafvUbn-n1zg3lERVWHcf/exec")
-							.then(res => res.json())
-							.then(data => {
-								let html = '';
-								data.forEach(item => {
-								if (item.ucapan && item.ucapan.trim() !== "") {
-									html += `
-									<div class="box has-text-centered" style="margin-bottom: 1rem;">
-										<strong>${item.nama}</strong><br>
-										<em>"${item.ucapan}"</em>
-									</div>
-									`;
+							document.getElementById("rsvp-form").addEventListener("submit", function(e) {
+							e.preventDefault();
+
+							const data = {
+								nama: document.getElementById("nama").value,
+								kehadiran: document.getElementById("kehadiran").value,
+								jumlah: document.getElementById("jumlah").value,
+								ucapan: document.getElementById("ucapan").value
+							};
+
+							fetch("https://script.google.com/macros/s/AKfycbzejNOOnVEu0JrJR__vyNsLngOFtCn9QPorb2zb1hzbKB50dOxV5FK2phn6DrDONjba/exec", {
+								method: "POST",
+								body: JSON.stringify(data),
+								headers: {
+								"Content-Type": "application/json"
 								}
-								});
-								document.getElementById("ucapan-list").innerHTML = html || "<p>Tiada ucapan lagi.</p>";
+							})
+							.then(res => res.text())
+							.then(res => {
+								window.location.href = "thankyou.html";
+							})
+							.catch(err => {
+								alert("Gagal hantar RSVP");
 							});
-							</script>
+							});
+						</script>
 					</div>
 					<!-- End Main Content -->			
 					<!-- Begin Footer -->
@@ -423,4 +431,3 @@
       </script>
 </body>
 </html>
-
