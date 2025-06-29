@@ -289,92 +289,110 @@
 						</div>
 					</section>
 					<!-- End Lokasi Content -->
-						<section class="section-dark contact" id="rsvp">
-					<div class="container" data-aos="fade-up">
-						<div class="columns is-centered">
-						<div class="column is-8 has-text-centered">
-							<h1 class="title section-title">RSVP</h1>
-							<p class="subtitle">Sila isi borang di bawah untuk maklumkan kehadiran anda</p>
+				<section class="section-dark contact" id="rsvp">
+  <div class="container" data-aos="fade-up">
+    <div class="columns is-centered">
+      <div class="column is-8 has-text-centered">
+        <h1 class="title section-title">RSVP</h1>
+        <p class="subtitle">Sila isi borang di bawah untuk maklumkan kehadiran anda</p>
 
-							<form action="https://formsubmit.co/syazmi.97vw5a@zapiermail.com" method="POST" class="box" style="background-color: #fffaf7; border-radius: 12px; padding: 2rem;">
+        <form id="rsvpForm" class="box" style="background-color: #fffaf7; border-radius: 12px; padding: 2rem;">
 
-							<div class="field">
-								<label class="label">Nama Penuh</label>
-								<div class="control">
-								<input class="input" type="text" name="Nama" placeholder="Contoh: Ali Bin Abu" required>
-								</div>
-							</div>
+          <div class="field">
+            <label class="label">Nama Penuh</label>
+            <div class="control">
+              <input class="input" type="text" name="Nama" placeholder="Contoh: Ali Bin Abu" required>
+            </div>
+          </div>
 
-							<div class="field">
-								<label class="label">Adakah anda akan hadir?</label>
-								<div class="control">
-								<div class="select is-fullwidth">
-									<select name="Kehadiran" required>
-									<option value="">Sila Pilih</option>
-									<option value="Akan Hadir">Akan Hadir</option>
-									<option value="Tidak Dapat Hadir">Tidak Dapat Hadir</option>
-									</select>
-								</div>
-								</div>
-							</div>
+          <div class="field">
+            <label class="label">Adakah anda akan hadir?</label>
+            <div class="control">
+              <div class="select is-fullwidth">
+                <select name="Kehadiran" required>
+                  <option value="">Sila Pilih</option>
+                  <option value="Akan Hadir">Akan Hadir</option>
+                  <option value="Tidak Dapat Hadir">Tidak Dapat Hadir</option>
+                </select>
+              </div>
+            </div>
+          </div>
 
-							<div class="field">
-								<label class="label">Bilangan Kehadiran</label>
-								<div class="control">
-								<input class="input" type="number" name="Jumlah" min="1" max="10" placeholder="Contoh: 2" required>
-								</div>
-							</div>
+          <div class="field">
+            <label class="label">Bilangan Kehadiran</label>
+            <div class="control">
+              <input class="input" type="number" name="Jumlah" min="1" max="10" placeholder="Contoh: 2" required>
+            </div>
+          </div>
 
-							<div class="field">
-								<label class="label">Ucapan (jika ada)</label>
-								<div class="control">
-								<textarea class="textarea" name="Ucapan" placeholder="Ucapan ringkas anda kepada pengantin..."></textarea>
-								</div>
-							</div>
+          <div class="field">
+            <label class="label">Ucapan (jika ada)</label>
+            <div class="control">
+              <textarea class="textarea" name="Ucapan" placeholder="Ucapan ringkas anda kepada pengantin..."></textarea>
+            </div>
+          </div>
 
-							<!-- Settings for FormSubmit -->
-							<input type="hidden" name="_captcha" value="false">
-							<input type="hidden" name="_next" value="https://syazmi.com/syazmi&nurin/thankyou.html">
-							
-							<div class="field is-grouped is-grouped-centered">
-								<div class="control">
-								<button class="button btn-cta" type="submit">Hantar RSVP</button>
-								</div>
-							</div>
+          <div class="field is-grouped is-grouped-centered">
+            <div class="control">
+              <button class="button btn-cta" type="submit">Hantar RSVP</button>
+            </div>
+          </div>
 
-							</form>
-						</div>
-						</div>
-					</div>
-					</section>
-						<!-- End RSVP Content -->
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
-						<section class="section-light" id="ucapan" data-aos="fade-up">
-						<div class="container" data-aos="fade-up">
-							<h2 class="title has-text-centered">Ucapan Tetamu</h2>
-							<div id="ucapan-list" class="content"></div>
-						</div>
-						</section>
+<!-- JavaScript Hantar ke Google Sheets -->
+<script>
+  document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-						<script>
-							fetch("https://script.google.com/macros/s/AKfycbw9Y8cRDW4tGewu0-AJSTulNqPkosK9sSmmyD_jt8S2n_xkVQzCKtWCOXxgksB37T3U/exec")
-							.then(res => res.json())
-							.then(data => {
-								let html = '';
-								data.forEach(item => {
-								if (item.ucapan && item.ucapan.trim() !== "") {
-									html += `
-									<div class="box has-text-centered" style="margin-bottom: 1rem;">
-										<strong>${item.nama}</strong><br>
-										<em>"${item.ucapan}"</em>
-									</div>
-									`;
-								}
-								});
-								document.getElementById("ucapan-list").innerHTML = html || "<p>Tiada ucapan lagi.</p>";
-							});
-							</script>
-					</div>
+    const form = e.target;
+    const data = new FormData(form);
+
+    fetch("https://script.google.com/macros/s/AKfycbwuXq5D1sN_klkGyQqRGPmUUr4EkVtJ26aAc_WmQY-wdfahrFf-UYX5q8yV12tC02yE/exec", {
+      method: "POST",
+      body: data
+    })
+    .then(response => response.text())
+    .then(result => {
+      // Redirect ke halaman 'Terima kasih'
+      window.location.href = "https://syazmi.com/syazmi&nurin/thankyou.html";
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      alert("Ralat semasa menghantar. Sila cuba semula.");
+    });
+  });
+</script>
+
+<section class="section-light" id="ucapan" data-aos="fade-up">
+  <div class="container" data-aos="fade-up">
+    <h2 class="title has-text-centered">Ucapan Tetamu</h2>
+    <div id="ucapan-list" class="content"></div>
+  </div>
+</section>
+
+<script>
+  fetch("https://script.google.com/macros/s/AKfycbwuXq5D1sN_klkGyQqRGPmUUr4EkVtJ26aAc_WmQY-wdfahrFf-UYX5q8yV12tC02yE/exec")
+    .then(res => res.json())
+    .then(data => {
+      let html = '';
+      data.forEach(item => {
+        if (item.ucapan && item.ucapan.trim() !== "") {
+          html += `
+            <div class="box has-text-centered" style="margin-bottom: 1rem;">
+              <strong>${item.nama}</strong><br>
+              <em>"${item.ucapan}"</em>
+            </div>
+          `;
+        }
+      });
+      document.getElementById("ucapan-list").innerHTML = html || "<p>Tiada ucapan lagi.</p>";
+    });
+</script>
 					<!-- End Main Content -->			
 					<!-- Begin Footer -->
 					<div class="footer">
