@@ -380,24 +380,24 @@
 					</script>
 
 					<!-- Paparan ucapan -->
-					<script>
-					fetch("https://script.google.com/macros/s/AKfycbz8FgCBXUkTYfyTW56qEwROkKuf5f8CkAm2J6DDmNUp1TA-yYyC8VF8sdjPAWR1s_7S/exec")
-						.then(res => res.json())
-						.then(data => {
-						let html = '';
-						data.forEach(item => {
-							if (item.ucapan && item.ucapan.trim() !== "") {
-							html += `
-								<div class="box has-text-centered" style="margin-bottom: 1rem;">
-								<strong>${item.nama}</strong><br>
-								<em>"${item.ucapan}"</em>
-								</div>
-							`;
-							}
-						});
-						document.getElementById("ucapan-list").innerHTML = html || "<p>Tiada ucapan lagi.</p>";
-						});
-					</script>
+						<script>
+							fetch("https://script.google.com/macros/s/AKfycbz8FgCBXUkTYfyTW56qEwROkKuf5f8CkAm2J6DDmNUp1TA-yYyC8VF8sdjPAWR1s_7S/exec")
+							.then(res => res.json())
+							.then(data => {
+								let html = '';
+								data.forEach(item => {
+								if (item.ucapan && item.ucapan.trim() !== "") {
+									html += `
+									<div class="box has-text-centered" style="margin-bottom: 1rem;">
+										<strong>${item.nama}</strong><br>
+										<em>"${item.ucapan}"</em>
+									</div>
+									`;
+								}
+								});
+								document.getElementById("ucapan-list").innerHTML = html || "<p>Tiada ucapan lagi.</p>";
+							});
+							</script>
 					</div>
 					<!-- End Main Content -->			
 					<!-- Begin Footer -->
