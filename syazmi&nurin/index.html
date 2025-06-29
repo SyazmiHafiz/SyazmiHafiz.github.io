@@ -289,15 +289,14 @@
 						</div>
 					</section>
 					<!-- End Lokasi Content -->
-						<!-- Letak ini di bahagian RSVP sahaja -->
-					<section class="section-dark contact" id="rsvp">
+						<section class="section-dark contact" id="rsvp">
 					<div class="container" data-aos="fade-up">
 						<div class="columns is-centered">
 						<div class="column is-8 has-text-centered">
 							<h1 class="title section-title">RSVP</h1>
 							<p class="subtitle">Sila isi borang di bawah untuk maklumkan kehadiran anda</p>
 
-							<form id="rsvpForm" class="box" style="background-color: #fffaf7; border-radius: 12px; padding: 2rem;">
+							<form action="https://formsubmit.co/syazmi.97vw5a@zapiermail.com" method="POST" class="box" style="background-color: #fffaf7; border-radius: 12px; padding: 2rem;">
 
 							<div class="field">
 								<label class="label">Nama Penuh</label>
@@ -333,6 +332,10 @@
 								</div>
 							</div>
 
+							<!-- Settings for FormSubmit -->
+							<input type="hidden" name="_captcha" value="false">
+							<input type="hidden" name="_next" value="https://syazmi.com/syazmi&nurin/thankyou.html">
+							
 							<div class="field is-grouped is-grouped-centered">
 								<div class="control">
 								<button class="button btn-cta" type="submit">Hantar RSVP</button>
@@ -344,42 +347,15 @@
 						</div>
 					</div>
 					</section>
+						<!-- End RSVP Content -->
 
-					<!-- Seksyen ucapan -->
-					<section class="section-light" id="ucapan" data-aos="fade-up">
-					<div class="container" data-aos="fade-up">
-						<h2 class="title has-text-centered">Ucapan Tetamu</h2>
-						<div id="ucapan-list" class="content"></div>
-					</div>
-					</section>
+						<section class="section-light" id="ucapan" data-aos="fade-up">
+						<div class="container" data-aos="fade-up">
+							<h2 class="title has-text-centered">Ucapan Tetamu</h2>
+							<div id="ucapan-list" class="content"></div>
+						</div>
+						</section>
 
-					<!-- JavaScript untuk submit + popup + refresh -->
-					<script>
-					document.getElementById('rsvpForm').addEventListener('submit', function(e) {
-						e.preventDefault(); // Hentikan submit asal
-
-						const form = e.target;
-						const data = new FormData(form);
-
-						fetch('https://script.google.com/macros/s/AKfycbz8FgCBXUkTYfyTW56qEwROkKuf5f8CkAm2J6DDmNUp1TA-yYyC8VF8sdjPAWR1s_7S/exec', {
-						method: 'POST',
-						body: data
-						})
-						.then(response => response.text())
-						.then(result => {
-						console.log("Server response:", result);
-						alert("Terima kasih kerana submit RSVP, kami amat hargai.");
-						window.scrollTo(0, 0); // Scroll ke atas
-						location.reload();     // Refresh page selepas submit
-						})
-						.catch(error => {
-						console.error('Error:', error);
-						alert("Ralat berlaku. Sila cuba semula.");
-						});
-					});
-					</script>
-
-					<!-- Paparan ucapan -->
 						<script>
 							fetch("https://script.google.com/macros/s/AKfycbz8FgCBXUkTYfyTW56qEwROkKuf5f8CkAm2J6DDmNUp1TA-yYyC8VF8sdjPAWR1s_7S/exec")
 							.then(res => res.json())
