@@ -289,7 +289,8 @@
 						</div>
 					</section>
 					<!-- End Lokasi Content -->
-						<section class="section-dark contact" id="rsvp">
+						<!-- Letak ini di bahagian RSVP sahaja -->
+					<section class="section-dark contact" id="rsvp">
 					<div class="container" data-aos="fade-up">
 						<div class="columns is-centered">
 						<div class="column is-8 has-text-centered">
@@ -332,10 +333,6 @@
 								</div>
 							</div>
 
-							<!-- Settings for FormSubmit -->
-							<input type="hidden" name="_captcha" value="false">
-							<input type="hidden" value="https://syazmi.com/syazmi&nurin/thankyou.html">
-							
 							<div class="field is-grouped is-grouped-centered">
 								<div class="control">
 								<button class="button btn-cta" type="submit">Hantar RSVP</button>
@@ -347,40 +344,60 @@
 						</div>
 					</div>
 					</section>
-						<!-- End RSVP Content -->
 
-						<section class="section-light" id="ucapan" data-aos="fade-up">
-						<div class="container" data-aos="fade-up">
-							<h2 class="title has-text-centered">Ucapan Tetamu</h2>
-							<div id="ucapan-list" class="content"></div>
-						</div>
-						</section>
+					<!-- Seksyen ucapan -->
+					<section class="section-light" id="ucapan" data-aos="fade-up">
+					<div class="container" data-aos="fade-up">
+						<h2 class="title has-text-centered">Ucapan Tetamu</h2>
+						<div id="ucapan-list" class="content"></div>
+					</div>
+					</section>
 
-						<script>
-							document.getElementById('rsvpForm').addEventListener('submit', function(e) {
-								e.preventDefault(); // hentikan submit asal
+					<!-- JavaScript untuk submit + popup + refresh -->
+					<script>
+					document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+						e.preventDefault(); // Hentikan submit asal
 
-								const form = e.target;
-								const data = new FormData(form);
+						const form = e.target;
+						const data = new FormData(form);
 
-								fetch('https://script.google.com/macros/s/AKfycbxfPb5Mq_Xz8z4i6cEvC8J6dU3AxpPTgm2GUMLYWXisKF5Scv6yxDqa8FDnEtMDVzSl/exec', {
-								method: 'POST',
-								body: data
-								})
-								.then(response => {
-								if (response.ok) {
-									// Redirect ke halaman terima kasih
-									window.location.href = "https://syazmi.com/syazmi&nurin/thankyou.html";
-								} else {
-									alert("Ada masalah hantar RSVP. Sila cuba lagi.");
-								}
-								})
-								.catch(error => {
-								console.error('Error:', error);
-								alert("Ralat berlaku. Sila cuba semula.");
-								});
+						fetch('https://script.google.com/macros/s/AKfycbz8FgCBXUkTYfyTW56qEwROkKuf5f8CkAm2J6DDmNUp1TA-yYyC8VF8sdjPAWR1s_7S/exec', {
+						method: 'POST',
+						body: data
+						})
+						.then(response => response.text())
+						.then(result => {
+						console.log("Server response:", result);
+						alert("Terima kasih kerana submit RSVP, kami amat hargai.");
+						window.scrollTo(0, 0); // Scroll ke atas
+						location.reload();     // Refresh page selepas submit
+						})
+						.catch(error => {
+						console.error('Error:', error);
+						alert("Ralat berlaku. Sila cuba semula.");
 						});
-						</script>
+					});
+					</script>
+
+					<!-- Paparan ucapan -->
+					<script>
+					fetch("https://script.google.com/macros/s/AKfycbz8FgCBXUkTYfyTW56qEwROkKuf5f8CkAm2J6DDmNUp1TA-yYyC8VF8sdjPAWR1s_7S/exec")
+						.then(res => res.json())
+						.then(data => {
+						let html = '';
+						data.forEach(item => {
+							if (item.ucapan && item.ucapan.trim() !== "") {
+							html += `
+								<div class="box has-text-centered" style="margin-bottom: 1rem;">
+								<strong>${item.nama}</strong><br>
+								<em>"${item.ucapan}"</em>
+								</div>
+							`;
+							}
+						});
+						document.getElementById("ucapan-list").innerHTML = html || "<p>Tiada ucapan lagi.</p>";
+						});
+					</script>
 					</div>
 					<!-- End Main Content -->			
 					<!-- Begin Footer -->
