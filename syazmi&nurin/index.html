@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="https://unpkg.com/bulma-tooltip@0.1.5/dist/bulma-tooltip.min.css" />
 		<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Petrona&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/menikah.css" />
 		<link rel="stylesheet" type="text/css" href="css/jquery.countdown.css" />
 		<script src="https://kit.fontawesome.com/2828f7885a.js" integrity="sha384-WAsFbnLEQcpCk8lM1UTWesAf5rGTCvb2Y+8LvyjAAcxK1c3s5c0L+SYOgxvc6PWG" crossorigin="anonymous"></script>
@@ -130,17 +131,20 @@
 	</div>
 
 	<script>
-	function bukaPintu() {
-	const overlay = document.getElementById("openingOverlay");
-	if (!overlay.classList.contains("open")) {
-		overlay.classList.add("open");
-		setTimeout(() => {
-		overlay.style.display = "none";
-		const music = document.getElementById("background_music");
-		if (music) music.play();
-		}, 1400);
-	}
-	}
+function bukaPintu() {
+  const overlay = document.getElementById("openingOverlay");
+  if (!overlay.classList.contains("open")) {
+    overlay.classList.add("open");
+    setTimeout(() => {
+      overlay.style.display = "none";
+      const music = document.getElementById("background_music");
+      if (music) music.play();
+
+      // Munculkan butang LOVE selepas pintu habis buka
+      document.getElementById("loveButton").classList.remove("hidden");
+    }, 1400); // sesuai dengan animasi pintu
+  }
+}
 
 	// Bila klik pada butang atau mana-mana bahagian overlay, buka pintu
 	document.getElementById("openingOverlay").addEventListener("click", bukaPintu);
@@ -149,37 +153,9 @@
     <div class="header-wrapper" id="home">
         <!-- Begin Hero -->
         <section class="hero is-large">
-            <!-- Begin Mobile Nav -->
-            <nav class="navbar is-transparent is-hidden-desktop">
-                <!-- Begin Burger Menu -->
-                <div class="navbar-brand is-fixed-top">
-                    <div class="navbar-burger burger" data-target="mobile-nav">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-                <!-- End Burger Menu -->
-                <div id="mobile-nav" class="navbar-menu">
-                    <div class="navbar-end">
-                        <div class="navbar-item">
-                            <a class="navbar-item" href="#aturan">
-                                Aturan Majlis
-                            </a>
-                        </div>
-                        <div class="navbar-item">
-                            <a class="navbar-item" href="#lokasi">
-                                Lokasi
-                            </a>
-                        </div>              
-                        <div class="navbar-item">
-                            <a class="navbar-item" href="#rsvp">
-                                 RSVP
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+
+
+			
             <!-- End Mobile Nav -->
             <!-- Begin Hero Content-->
             <div class="hero-body">
@@ -511,6 +487,17 @@
 					</div>
 					</section>
 
+					<!-- Floating Love Button -->
+					<div id="loveButton" class="hidden">
+					❤️
+					<div id="navMenu">
+						<a href="#aturan">Aturan</a>
+						<a href="#lokasi">Lokasi</a>
+						<a href="#rsvp">RSVP</a>
+						<a href="#ucapan">Ucapan</a>
+					</div>
+					</div>
+
 					<script>
 					fetch("https://script.google.com/macros/s/AKfycbwuXq5D1sN_klkGyQqRGPmUUr4EkVtJ26aAc_WmQY-wdfahrFf-UYX5q8yV12tC02yE/exec")
 						.then(res => res.json())
@@ -560,5 +547,65 @@
 						document.getElementById("myModal").style.display = "none";
 						}
 					</script>
+
+<script>
+  const loveButton = document.getElementById("loveButton");
+  const navMenu = document.getElementById("navMenu");
+  let isDragging = false;
+  let offsetX = 0, offsetY = 0;
+
+  function startDrag(e) {
+    isDragging = true;
+    const touch = e.type.includes("touch") ? e.touches[0] : e;
+    offsetX = touch.clientX - loveButton.getBoundingClientRect().left;
+    offsetY = touch.clientY - loveButton.getBoundingClientRect().top;
+    loveButton.style.cursor = "grabbing";
+  }
+
+  function drag(e) {
+    if (!isDragging) return;
+    e.preventDefault();
+    const touch = e.type.includes("touch") ? e.touches[0] : e;
+    loveButton.style.left = (touch.clientX - offsetX) + "px";
+    loveButton.style.top = (touch.clientY - offsetY) + "px";
+    loveButton.style.right = "auto";
+    loveButton.style.bottom = "auto";
+  }
+
+  function endDrag() {
+    isDragging = false;
+    loveButton.style.cursor = "grab";
+  }
+
+  loveButton.addEventListener("mousedown", startDrag);
+  document.addEventListener("mousemove", drag);
+  document.addEventListener("mouseup", endDrag);
+  loveButton.addEventListener("touchstart", startDrag);
+  document.addEventListener("touchmove", drag);
+  document.addEventListener("touchend", endDrag);
+
+  loveButton.addEventListener("click", function(e) {
+    if (!isDragging) {
+      navMenu.classList.toggle("show");
+      e.stopPropagation();
+    }
+  });
+
+  document.addEventListener("click", function() {
+    navMenu.classList.remove("show");
+  });
+
+  document.querySelectorAll("#navMenu a").forEach(link => {
+    link.addEventListener("click", function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      const y = target.getBoundingClientRect().top + window.scrollY - 50;
+      window.scrollTo({ top: y, behavior: "smooth" });
+      target.classList.add("highlight");
+      setTimeout(() => target.classList.remove("highlight"), 1000);
+      navMenu.classList.remove("show");
+    });
+  });
+</script>
 </body>
 </html>
