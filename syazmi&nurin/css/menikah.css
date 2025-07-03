@@ -616,6 +616,30 @@ body.preloader-site {
   background-size: auto 80px;
 }
 
+.divider-container {
+  margin: 1rem auto 0 auto;
+  width: 150px; /* ubah ikut saiz */
+  height: 20px; /* tinggi gambar divider */
+  background-image: url('../image/divider1-darkest.png');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: auto 80px;
+}
+
+.section-dark-divider {
+  background-image: url(../image/divider1-darkest.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: auto 50px;
+}
+
+.section-darker-divider {
+  background-image: url(../image/divider1-darkest.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: auto 50px;
+}
+
 .instagram {
   color: #996E6D;
   font-size: 1.25rem;
