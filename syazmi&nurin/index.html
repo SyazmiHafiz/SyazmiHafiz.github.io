@@ -92,6 +92,33 @@
   transform: scale(1.05);
 }
 
+.left-door {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100vh;
+  background-image: url('../syazmi&nurin/image/pintukiri.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 2s ease;
+}
+
+.right-door {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  background-image: url('../syazmi&nurin/image/pintukanan.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-left: 1px solid #f8b8c4;
+  transition: all 2s ease;
+}
+
 .overlay-opening.open .left-door {
   transform: translateX(-100%);
 }
@@ -294,9 +321,8 @@ function bukaPintu() {
 
   <br><br>
 
-  <div data-aos="fade-up" data-aos-easing="linear">
-    <img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~" data-aos="fade-up">
-  </div>
+
+
 
   <br><br>
 </section>
@@ -336,6 +362,7 @@ function bukaPintu() {
 						</div>
 						<div class="space40px"></div>
 					</section>
+
 					<!-- End Waktu Content -->				
 					<!-- Begin Lokasi Section -->
 					<section class="section-darker" id="lokasi" >
