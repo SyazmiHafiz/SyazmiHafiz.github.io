@@ -164,14 +164,17 @@ function bukaPintu() {
   const overlay = document.getElementById("openingOverlay");
   if (!overlay.classList.contains("open")) {
     overlay.classList.add("open");
-    setTimeout(() => {
-      overlay.style.display = "none";
-      const music = document.getElementById("background_music");
-      if (music) music.play();
+	setTimeout(() => {
+	overlay.style.display = "none";
+	const music = document.getElementById("background_music");
+	if (music) music.play();
 
-      // Munculkan butang LOVE selepas pintu habis buka
-      document.getElementById("loveButton").classList.remove("hidden");
-    }, 1400); // sesuai dengan animasi pintu
+	document.getElementById("loveButton").classList.remove("hidden");
+
+	// Mula autoscroll selepas pintu habis buka
+	if (typeof startScrolling === "function") startScrolling();
+
+	}, 1400);
   }
 }
 

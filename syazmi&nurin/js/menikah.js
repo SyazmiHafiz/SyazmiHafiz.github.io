@@ -75,9 +75,9 @@ function stopScrolling() {
 }
 
 // Start scrolling when the page loads
-$(document).ready(function() {
-  setTimeout(startScrolling, 3000); // Start after 3 seconds to allow user to see the top
-});
+//$(document).ready(function() {
+//  setTimeout(startScrolling, 3000); // Start after 3 seconds to allow user to see the top
+//});
 
 // Stop scrolling on user interaction
 $(window).on('scroll wheel DOMMouseScroll mousewheel keyup touchmove', function(e) {
