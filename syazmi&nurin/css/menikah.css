@@ -1012,8 +1012,9 @@ body.preloader-site {
   height: 25px;
   background: rgba(255, 192, 203, 0.4);
   border-radius: 50%;
-  animation: rise 10s linear infinite;
-  
+  box-shadow: 0 0 12px rgba(255, 192, 203, 0.6);
+  animation: rise 10s linear infinite, fadeGlow 3s ease-in-out infinite;
+  transition: all 0.3s ease-in-out;
 }
 
 @keyframes rise {
@@ -1105,4 +1106,37 @@ body.preloader-site {
 @keyframes flashBg {
   0% { background-color: #fff8d4; }
   100% { background-color: inherit; }
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.open-button span {
+  animation: fadeInOut 2.5s ease-in-out infinite;
+}
+
+@keyframes fadeGlow {
+  0%, 100% {
+    opacity: 0.4;
+    box-shadow: 0 0 6px rgba(255, 192, 203, 0.3);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 18px rgba(255, 182, 193, 0.8);
+  }
+}
+
+.open-button span {
+  animation: fadeInOut 1.5s ease-in-out infinite, glowText 1.5s ease-in-out infinite;
+}
+
+@keyframes glowText {
+  0%, 100% {
+    text-shadow: 0 0 6px #fff0f5;
+  }
+  50% {
+    text-shadow: 0 0 16px #f8b8c4;
+  }
 }
