@@ -1140,3 +1140,26 @@ body.preloader-site {
     text-shadow: 0 0 16px #f8b8c4;
   }
 }
+
+.bird {
+  position: absolute;
+  width: 50px;
+  height: auto;
+  z-index: 2002;
+  animation: fly 5s linear infinite;
+}
+
+
+
+@keyframes fly {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(100px, 50px) rotate(15deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+

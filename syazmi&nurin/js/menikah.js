@@ -104,3 +104,54 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const birdsContainer = document.getElementById("birds-container");
+
+  for (let i = 0; i < 3; i++) {
+    const bird = document.createElement("img");
+    bird.src = "image/3.gif";
+    bird.classList.add("bird");
+    bird.style.position = "absolute";
+    bird.style.zIndex = "2002";
+
+    birdsContainer.appendChild(bird);
+
+    initBird(bird, i);
+  }
+
+  function initBird(bird, index) {
+    const isLeft = index % 2 === 0;
+
+    const sizePx = 50 + Math.random() * 50; // 50–100px
+    bird.style.width = sizePx + "px";
+    bird.style.height = "auto";
+
+    moveBird(bird, isLeft, sizePx);
+  }
+
+  function moveBird(bird, isLeft, sizePx) {
+    const vwPerPx = window.innerWidth / 100;
+    const vhPerPx = window.innerHeight / 100;
+
+    const birdWidthVw = sizePx / vwPerPx;
+    const birdHeightVh = (sizePx * 0.75) / vhPerPx; // aspect ratio anggaran
+
+    // kawasan pintu = 0–50vw atau 50–100vw
+    const minLeft = isLeft ? 0 : 50;
+    const maxLeft = isLeft ? (50 - birdWidthVw) : (100 - birdWidthVw);
+
+    const x = minLeft + Math.random() * (maxLeft - minLeft);
+    const y = Math.random() * (100 - birdHeightVh);
+
+    const duration = 3 + Math.random() * 4;
+
+    bird.style.transition = `all ${duration}s ease-in-out`;
+    bird.style.left = x + "vw";
+    bird.style.top = y + "vh";
+
+    setTimeout(() => {
+      moveBird(bird, isLeft, sizePx);
+    }, duration * 1000);
+  }
+});
