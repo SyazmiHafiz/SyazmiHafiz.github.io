@@ -108,50 +108,57 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const birdsContainer = document.getElementById("birds-container");
 
-  for (let i = 0; i < 3; i++) {
+  const totalBirds2 = 3;
+  const totalBirds5 = 3;
+
+  // Tambah 3 ekor burung 2.gif
+  for (let i = 0; i < totalBirds2; i++) {
+    createBird("image/2.gif");
+  }
+
+  // Tambah 5 ekor burung 5.gif
+  for (let i = 0; i < totalBirds5; i++) {
+    createBird("image/5.gif");
+  }
+
+  function createBird(src) {
     const bird = document.createElement("img");
-    bird.src = "image/3.gif";
+    bird.src = src;
     bird.classList.add("bird");
     bird.style.position = "absolute";
     bird.style.zIndex = "2002";
 
     birdsContainer.appendChild(bird);
 
-    initBird(bird, i);
+    initBird(bird);
   }
 
-  function initBird(bird, index) {
-    const isLeft = index % 2 === 0;
-
+  function initBird(bird) {
     const sizePx = 50 + Math.random() * 50; // 50–100px
     bird.style.width = sizePx + "px";
     bird.style.height = "auto";
 
-    moveBird(bird, isLeft, sizePx);
+    moveBird(bird, sizePx);
   }
 
-  function moveBird(bird, isLeft, sizePx) {
+  function moveBird(bird, sizePx) {
     const vwPerPx = window.innerWidth / 100;
     const vhPerPx = window.innerHeight / 100;
 
     const birdWidthVw = sizePx / vwPerPx;
-    const birdHeightVh = (sizePx * 0.75) / vhPerPx; // aspect ratio anggaran
+    const birdHeightVh = (sizePx * 0.75) / vhPerPx;
 
-    // kawasan pintu = 0–50vw atau 50–100vw
-    const minLeft = isLeft ? 0 : 50;
-    const maxLeft = isLeft ? (50 - birdWidthVw) : (100 - birdWidthVw);
-
-    const x = minLeft + Math.random() * (maxLeft - minLeft);
+    const x = Math.random() * (100 - birdWidthVw);
     const y = Math.random() * (100 - birdHeightVh);
 
-    const duration = 3 + Math.random() * 4;
+    const duration = 1.8 + Math.random() * 5;
 
     bird.style.transition = `all ${duration}s ease-in-out`;
     bird.style.left = x + "vw";
     bird.style.top = y + "vh";
 
     setTimeout(() => {
-      moveBird(bird, isLeft, sizePx);
+      moveBird(bird, sizePx);
     }, duration * 1000);
   }
 });
