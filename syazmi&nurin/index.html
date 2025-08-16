@@ -92,31 +92,54 @@
   transform: scale(1.05);
 }
 
-.left-door {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100vh;
-  background-image: url('../syazmi&nurin/image/pintumasuk2.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: all 2s ease;
-}
+/* ===== PINTU GUNA SATU GAMBAR tangan.jpg ===== */
 
+.left-door,
 .right-door {
   position: fixed;
   top: 0;
-  right: 0;
   width: 50%;
   height: 100vh;
-  background-image: url('../syazmi&nurin/image/pintumasuk2.jpg');
-  background-size: cover;
-  background-position: center;
+  background-image: url('../syazmi&nurin/image/tangan.jpg'); /* satu gambar penuh */
   background-repeat: no-repeat;
+  background-size: 200% 100%; /* penting: jadikan 2x lebar supaya boleh belah dua */
+  transition: transform 2s ease-in-out;
+  will-change: transform;
+  z-index: 2000;
+}
+
+/* pintu kiri ambil bahagian kiri gambar */
+.left-door {
+  left: 0;
+  background-position: left center;
+  transform-origin: left center;
+}
+
+/* pintu kanan ambil bahagian kanan gambar */
+.right-door {
+  right: 0;
+  background-position: right center;
+  transform-origin: right center;
   border-left: 1px solid #f8b8c4;
-  transition: all 2s ease;
+}
+
+/* animasi buka */
+.overlay-opening.open .left-door {
+  transform: rotateY(-100deg);
+}
+
+.overlay-opening.open .right-door {
+  transform: rotateY(100deg);
+}
+
+/* untuk skrin kecil (mobile) – buka kurang sikit */
+@media (max-width: 768px) {
+  .overlay-opening.open .left-door {
+    transform: rotateY(-90deg);
+  }
+  .overlay-opening.open .right-door {
+    transform: rotateY(90deg);
+  }
 }
 
 

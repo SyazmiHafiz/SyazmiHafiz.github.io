@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Opening Door Animation</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    background: black;
+  }
+
+  .door-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    perspective: 2000px;
+    overflow: hidden;
+  }
+
+  .door {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url("tangan.jpg");
+    background-size: 200% 100%; /* penting: jadikan gambar 2x width supaya boleh belah */
+    background-repeat: no-repeat;
+    transition: transform 2s ease-in-out;
+  }
+
+  .left {
+    left: 0;
+    background-position: left center; /* ambil separuh kiri */
+    transform-origin: left center;
+  }
+
+  .right {
+    right: 0;
+    background-position: right center; /* ambil separuh kanan */
+    transform-origin: right center;
+  }
+
+  .door-container.open .left {
+    transform: rotateY(-100deg);
+  }
+
+  .door-container.open .right {
+    transform: rotateY(100deg);
+  }
+
+  @media (max-width: 768px) {
+    .door-container.open .left {
+      transform: rotateY(-90deg);
+    }
+    .door-container.open .right {
+      transform: rotateY(90deg);
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="door-container" id="doors">
+  <div class="door left"></div>
+  <div class="door right"></div>
+</div>
+
+<script>
+  const doors = document.getElementById('doors');
+
+  // klik di mana-mana untuk buka/tutup
+  document.body.addEventListener('click', () => {
+    doors.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>
