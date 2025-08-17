@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Syazmi ❤ Nurin — Pink Bubbles Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --pink-50:#fff1f7;
+      --pink-100:#ffe4ef;
+      --pink-200:#ffcfe4;
+      --pink-300:#ffb3d6;
+      --pink-400:#ff8fc3;
+      --pink-500:#ff66ad;
+      --pink-600:#ff3c96;
+      --pink-700:#e0227e;
+      --ink:#351a29;
+      --bg: radial-gradient(1200px 800px at 10% 10%, var(--pink-50), transparent),
+            radial-gradient(900px 700px at 90% 20%, var(--pink-100), transparent),
+            linear-gradient(180deg, #fff8fb, #ffe9f3 60%, #ffd2e7);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Poppins, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--ink); background:var(--bg); overflow-x:hidden; position:relative;
+    }
+
+    /* ENTRY MODAL */
+    .entry-modal{
+      position:fixed; inset:0; display:flex; align-items:center; justify-content:center;
+      backdrop-filter:blur(14px); background:rgba(255,240,248,.85);
+      z-index:100; transition:opacity .8s ease, visibility .8s ease;
+    }
+    .entry-modal.hidden{ opacity:0; visibility:hidden; }
+    .entry-box{
+      text-align:center; padding:40px 30px; border-radius:24px;
+      background:linear-gradient(180deg,#fff,#ffe3f0); box-shadow:0 15px 40px rgba(255,102,173,.3);
+      animation: popIn 1s ease;
+    }
+    @keyframes popIn {
+      0% { transform: scale(.6); opacity:0; }
+      100% { transform: scale(1); opacity:1; }
+    }
+    .entry-box h2{ margin:0 0 16px; font-size:2rem; font-weight:800; color:var(--pink-700); }
+    .entry-btn{
+      padding:12px 24px; border-radius:999px; border:none; cursor:pointer;
+      background:linear-gradient(90deg,var(--pink-600),var(--pink-400));
+      color:white; font-size:1rem; font-weight:600; box-shadow:0 6px 18px rgba(255,102,173,.35);
+      transition: all .3s ease;
+    }
+    .entry-btn:hover{ transform:scale(1.08) rotate(-2deg); box-shadow:0 8px 22px rgba(255,102,173,.5); }
+
+    /* BUBBLES BACKGROUND */
+    .bubbles{ position:fixed; inset:0; overflow:hidden; z-index:-1; pointer-events:none; }
+    .bubble{ position:absolute; bottom:-120px; border-radius:50%;
+      opacity:.55; background:radial-gradient(circle at 30% 30%, rgba(255,255,255,.95), rgba(255,255,255,.35) 55%, rgba(255,102,173,.3));
+      box-shadow: inset 0 0 20px rgba(255,255,255,.9), 0 8px 20px rgba(255,102,173,.25);
+      animation: rise var(--dur) linear infinite, sway var(--sway) ease-in-out infinite, glow 4s ease-in-out infinite;
+    }
+    @keyframes rise { to { transform: translateY(-120vh) translateZ(0); } }
+    @keyframes sway { 50% { transform: translateX(var(--dx)) translateY(-60vh);} }
+    @keyframes glow {
+      0%,100% { filter: drop-shadow(0 0 6px rgba(255,105,180,.6)); }
+      50% { filter: drop-shadow(0 0 18px rgba(255,20,147,.8)); }
+    }
+
+    header{ text-align:center; padding:32px 16px 12px; }
+    .title{
+      font-weight:800; letter-spacing:.5px; margin:0;
+      font-size: clamp(24px, 4.5vw, 48px);
+      background:linear-gradient(90deg,var(--pink-700),var(--pink-500));
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+      animation: shimmer 3s infinite linear;
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    .subtitle{ margin:.35rem 0 0; font-weight:400; opacity:.75; font-style:italic; }
+
+    .wrap{ max-width:1200px; margin:0 auto; padding:20px clamp(12px, 3vw, 28px) 80px; }
+    .gallery{ display:grid; gap:16px; }
+    .row{ display:grid; gap:16px; }
+    .row.two{ grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); }
+    .row.one{ grid-template-columns:1fr; }
+
+    figure{ margin:0; position:relative; border-radius:18px; overflow:hidden; 
+      background:rgba(255,255,255,.6); backdrop-filter: blur(6px); 
+      box-shadow:0 10px 30px rgba(255,102,173,.15); transition: transform .6s ease, box-shadow .6s ease;
+    }
+    figure:hover{ transform:scale(1.05) rotate(1deg); box-shadow:0 15px 40px rgba(255,102,173,.4); }
+    img.photo{ display:block; width:100%; height:100%; object-fit:cover; aspect-ratio: 4/5; transition: transform 1.5s ease; }
+    figure:hover img.photo{ transform: scale(1.1); }
+    figcaption{ position:absolute; bottom:0; left:0; right:0; padding:10px; font-weight:600; color:#77264f; 
+      background:linear-gradient(to top, rgba(255,240,248,.95), transparent); }
+
+    footer{
+      text-align:center; font-weight:600; padding:20px;
+      background:linear-gradient(90deg, var(--pink-200), var(--pink-400));
+      border-top:3px solid var(--pink-500); color:var(--pink-700);
+    }
+  </style>
+</head>
+<body>
+  <div class="entry-modal" id="entryModal">
+    <div class="entry-box">
+      <h2>With MySayang ❤️</h2>
+      <button class="entry-btn" id="enterBtn">Enter</button>
+    </div>
+  </div>
+
+  <audio id="bgMusic" src="music2.mp3" loop></audio>
+
+  <div class="bubbles" aria-hidden="true" id="bubbles"></div>
+
+  <header class="wrap">
+    <h1 class="title">Syazmi & Nurin</h1>
+    <p class="subtitle">Our memories ✨</p>
+  </header>
+
+  <main class="wrap">
+    <section class="gallery" id="gallery">
+      <div class="row two">
+        <figure><img class="photo" src="images/1.jpeg" alt=""><figcaption>18/4/2025 - Zahon</figcaption></figure>
+        <figure><img class="photo" src="images/2.jpeg" alt=""><figcaption>18/4/2025 - Zahon</figcaption></figure>
+      </div>
+      <div class="row two">
+        <figure><img class="photo" src="images/3.jpeg" alt=""><figcaption>12/5/2025 - KBB Steak</figcaption></figure>
+        <figure><img class="photo" src="images/4.jpeg" alt=""><figcaption>12/5/2025 - KBB Steak</figcaption></figure>
+      </div>
+      <div class="row two">
+        <figure><img class="photo" src="images/5.jpeg" alt=""><figcaption>29/5/2025 - Chibana</figcaption></figure>
+        <figure><img class="photo" src="images/6.jpeg" alt=""><figcaption>29/5/2025 - Chibana</figcaption></figure>
+      </div>
+      <div class="row two">
+        <figure><img class="photo" src="images/7.jpeg" alt=""><figcaption>28/6/2025 - Mi Tarik Barakah</figcaption></figure>
+        <figure><img class="photo" src="images/8.jpeg" alt=""><figcaption>28/6/2025 - Mi Tarik Barakah</figcaption></figure>
+      </div>
+      <div class="row two">
+        <figure><img class="photo" src="images/9.jpeg" alt=""><figcaption>7/8/2025 - Mayang Mall</figcaption></figure>
+        <figure><img class="photo" src="images/10.jpeg" alt=""><figcaption>7/8/2025 - Mayang Mall</figcaption></figure>
+      </div>
+    </section>
+  </main>
+
+  <footer>With My 💗 Sayang</footer>
+
+  <script>
+    // bubbles background
+    const bubbleHost = document.getElementById('bubbles');
+    for(let i=0;i<32;i++){
+      const s=document.createElement('span');s.className='bubble';
+      const size=Math.random()*70+18;
+      const left=Math.random()*100;
+      const delay=Math.random()*-12;
+      const dur=Math.random()*20+16;
+      const sway=Math.random()*8+4;
+      const dx=(Math.random()>.5?1:-1)*(Math.random()*40+16)+'px';
+      Object.assign(s.style,{width:size+'px',height:size+'px',left:left+'vw',animationDelay:delay+'s','--dur':dur+'s','--sway':sway+'s','--dx':dx});
+      bubbleHost.appendChild(s);
+    }
+
+    // modal + music
+    const entryModal=document.getElementById('entryModal');
+    const enterBtn=document.getElementById('enterBtn');
+    const bgMusic=document.getElementById('bgMusic');
+
+    enterBtn.addEventListener('click',()=>{
+      entryModal.classList.add('hidden');
+      bgMusic.play();
+    });
+  </script>
+</body>
+</html>
