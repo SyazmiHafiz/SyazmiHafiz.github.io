@@ -8,6 +8,53 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
   <style>
+    .slider {
+  position: relative;
+  width: 300px;
+  height: 180px;
+  margin: 0 auto 40px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  background: white;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--pink-700);
+}
+
+.buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.btn {
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
     :root{
       --pink-50:#fff1f7;
       --pink-100:#ffe4ef;
@@ -156,6 +203,17 @@
   </header>
 
   <main class="wrap">
+      <!-- SLIDER LOVE MESSAGE -->
+  <div class="slider">
+    <div class="slides" id="slides">
+      <div class="slide">I LOVE YOU</div>
+      <div class="slide">SAYANG</div>
+    </div>
+    <div class="buttons">
+      <button class="btn" onclick="prevSlide()">❮</button>
+      <button class="btn" onclick="nextSlide()">❯</button>
+    </div>
+  </div>
     <section class="gallery" id="gallery">
       <div class="row two">
         <figure><img class="photo" src="images/1.jpeg" alt=""><figcaption>18/4/2025 - Zahon</figcaption></figure>
@@ -228,5 +286,18 @@
       bgMusic.play();
     });
   </script>
+  <script>
+  let index = 0;
+  const slides = document.getElementById("slides");
+  const total = document.querySelectorAll(".slide").length;
+
+  function showSlide(i) {
+    index = (i + total) % total;
+    slides.style.transform = `translateX(${-index * 100}%)`;
+  }
+
+  function nextSlide() { showSlide(index + 1); }
+  function prevSlide() { showSlide(index - 1); }
+</script>
 </body>
 </html>
