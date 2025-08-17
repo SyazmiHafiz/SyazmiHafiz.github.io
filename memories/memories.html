@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
   <style>
+
+  
     .slider {
   position: relative;
   width: 300px;
@@ -147,7 +149,7 @@
     }
     .subtitle{ margin:.35rem 0 0; font-weight:400; opacity:.75; font-style:italic; }
 
-    .wrap{ max-width:1200px; margin:0 auto; padding:20px clamp(12px, 3vw, 28px) 80px; }
+    .wrap{ max-width:1200px; margin:0 auto; padding:20px clamp(12px, 3vw, 28px) 40px; }
     .gallery{ display:grid; gap:16px; }
     .row{ display:grid; gap:16px; }
     .row.two{ grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); }
@@ -181,6 +183,42 @@
       0%,100%{transform:translateX(-50%) scale(1);}
       50%{transform:translateX(-50%) scale(1.2);}
     }
+
+    figcaption {
+  position: absolute;
+  bottom: 0;                 /* duduk bawah gambar */
+  left: 0;
+  width: 100%;               /* penuh lebar gambar */
+  padding: 10px;
+  
+  background: rgba(0,0,0,0.5); /* boleh tukar warna/transparent ikut taste */
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;        /* tulisan center horizontal */
+
+  display: flex;
+  justify-content: center;   /* center horizontal */
+  align-items: center;       /* center vertical */
+}
+
+.big-love {
+  font-size: 80px;
+  text-align: center;
+  margin-top: 0;          /* buang jarak atas */
+  margin-bottom: 1px;    /* jarak kecil ke gallery */
+  display: inline-block;
+}
+
+.big-love span {
+  display: inline-block;
+  animation: heartbeat 2s infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
   </style>
 </head>
 <body>
@@ -200,20 +238,9 @@
   <header class="wrap">
     <h1 class="title">Syazmi & Nurin</h1>
     <p class="subtitle">Our memories ✨</p>
+    <div class="big-love"><span>❤️</span></div>
   </header>
-
   <main class="wrap">
-      <!-- SLIDER LOVE MESSAGE -->
-  <div class="slider">
-    <div class="slides" id="slides">
-      <div class="slide">I LOVE YOU</div>
-      <div class="slide">SAYANG</div>
-    </div>
-    <div class="buttons">
-      <button class="btn" onclick="prevSlide()">❮</button>
-      <button class="btn" onclick="nextSlide()">❯</button>
-    </div>
-  </div>
     <section class="gallery" id="gallery">
       <div class="row two">
         <figure><img class="photo" src="images/1.jpeg" alt=""><figcaption>18/4/2025 - Zahon</figcaption></figure>
@@ -239,7 +266,18 @@
         <figure><img class="photo" src="images/11.jpeg" alt=""><figcaption>9/8/2025 - Bukit Pandak</figcaption></figure>
         <figure><img class="photo" src="images/12.jpeg" alt=""><figcaption>9/8/2025 - Pantai Pandak</figcaption></figure>
       </div>
-    </section>
+    </section><br><br><br><br>
+          <!-- SLIDER LOVE MESSAGE -->
+  <div class="slider">
+    <div class="slides" id="slides">
+      <div class="slide">I LOVE YOU</div>
+      <div class="slide">SAYANG</div>
+    </div>
+    <div class="buttons">
+      <button class="btn" onclick="prevSlide()">❮</button>
+      <button class="btn" onclick="nextSlide()">❯</button>
+    </div>
+  </div>
   </main>
 
 
@@ -287,17 +325,23 @@
     });
   </script>
   <script>
-  let index = 0;
-  const slides = document.getElementById("slides");
-  const total = document.querySelectorAll(".slide").length;
+let index = 0;
+const slides = document.getElementById("slides");
+const total = document.querySelectorAll(".slide").length;
 
-  function showSlide(i) {
-    index = (i + total) % total;
-    slides.style.transform = `translateX(${-index * 100}%)`;
-  }
+function showSlide(i) {
+  index = (i + total) % total;
+  slides.style.transform = `translateX(${-index * 100}%)`;
+}
 
-  function nextSlide() { showSlide(index + 1); }
-  function prevSlide() { showSlide(index - 1); }
+function nextSlide() { showSlide(index + 1); }
+function prevSlide() { showSlide(index - 1); }
+
+// autoplay setiap 2 saat
+setInterval(nextSlide, 2000);
+
+// mula dengan slide pertama
+showSlide(0);
 </script>
 </body>
 </html>
