@@ -57,6 +57,23 @@
 
 <style>
 
+#statik-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;     /* penuh skrin width */
+  height: 100vh;    /* penuh skrin height */
+  object-fit: cover; /* pastikan gambar cover penuh */
+  z-index: 1;     /* berada paling depan */
+  pointer-events: none; /* supaya user boleh klik elemen belakang */
+  opacity: 1;        /* boleh tukar 0.2 – 1 ikut cita rasa */
+}
+
+@media (max-width: 768px) {
+    #statik-image {
+        object-position: center;
+    }
+}
 .overlay-opening {
   position: fixed;
   top: 0;
@@ -195,7 +212,8 @@
 }
 </style>
   <div class="bubbles" id="bubbles-container"></div>
-  <body onload="$('#myModal').modal('show')">  
+  <body onload="$('#myModal').modal('show')" >  
+	<img id="statik-image" src="image/statik17.png" alt="statik">
 	<div class="overlay-opening" id="openingOverlay">
 	<div class="door left-door"></div>
 	<div class="door right-door"></div>
@@ -700,6 +718,22 @@ document.querySelectorAll("#navMenu a").forEach(link => {
     }, 150);
   });
 });
+
+function tukarStatikImage() {
+    const img = document.getElementById("statik-image");
+
+    if (window.innerWidth <= 768) {
+        img.src = "image/statik18.png";   // gambar versi mobile
+    } else {
+        img.src = "image/statik17.png";          // gambar desktop
+    }
+}
+
+// Bila load
+tukarStatikImage();
+
+// Bila rotate phone / resize
+window.addEventListener("resize", tukarStatikImage);
 </script>
 </body>
 </html>
