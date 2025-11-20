@@ -205,8 +205,8 @@ const fileSystem = {
         children: {
             'about.txt': { type: 'file', content: "Syazmi Hafiz\nCybersecurity Specialist | Offensive Security Researcher\nLocation: [REDACTED]\nMission: Securing digital ecosystems through ethical hacking, threat analysis, and secure engineering." },
             'skills.txt': { type: 'file', content: "SKILLS:\n- Penetration Testing (Web, Network, API)\n- Red Teaming & Adversary Simulation\n- Threat Intelligence & Malware Analysis\n- Secure Code Review\n\nTOOLS:\n- Burp Suite, OWASP ZAP, Metasploit, Nmap\n- Wireshark, tcpdump, Sysmon\n- John the Ripper, Hashcat\n- Splunk, ELK, Zeek\n- Docker, Kubernetes (for secure deployments)\n\nLANGUAGES:\n- Python (automation & tooling)\n- Bash (offensive scripting)\n- Go (security tooling)" },
-            'research.txt': { type: 'file', content: "- Discovered vulnerabilities in web apps (XSS, IDOR, SSRF)\n- Studying malware C2 communication patterns\n- Building custom recon automation tools" },
-            'contact.txt': { type: 'file', content: "Email: contact@muhammadsyazmihafiz@gmail.com\nWebsite: syazmi.com" },
+            'research.txt': { type: 'file', content: "- Discovered vulnerabilities in web apps (SQL Injection, XSS, IDOR, SSRF)\n- Studying malware C2 communication patterns\n- Building custom recon automation tools" },
+            'contact.txt': { type: 'file', content: "Email: muhammadsyazmihafiz@gmail.com\nWebsite: syazmi.com" },
             'projects': {
                 type: 'dir',
                 children: {
@@ -735,3 +735,4 @@ document.addEventListener('click', () => {
         commandInput.focus();
     }
 });
+
