@@ -24,6 +24,24 @@ class SoundManager {
         this.initialized = true;
     }
 
+    unlockMobile() {
+        if (this.ctx && this.ctx.state === 'suspended') {
+            this.ctx.resume();
+        }
+        // Play silent buffer to unlock iOS audio
+        const buffer = this.ctx.createBuffer(1, 1, 22050);
+        const source = this.ctx.createBufferSource();
+        source.buffer = buffer;
+        source.connect(this.ctx.destination);
+        source.start(0);
+
+        // Unlock Speech Synthesis
+        if (window.speechSynthesis) {
+            const utterance = new SpeechSynthesisUtterance('');
+            window.speechSynthesis.speak(utterance);
+        }
+    }
+
     playTone(freq, type, duration) {
         if (!this.initialized) return;
         const osc = this.ctx.createOscillator();
@@ -280,6 +298,11 @@ const asciiBanner = `
   ██████     ██    ██   ██ ███████ ██      ██ ██ 
 `;
 
+const mobileBanner = `
+  SYAZMI.COM
+  [SYSTEM ONLINE]
+`;
+
 async function typeText(element, text, speed = 20) {
     element.textContent = '';
     for (let i = 0; i < text.length; i++) {
@@ -299,12 +322,14 @@ async function runBootSequence() {
     soundManager.playBootSound();
     await new Promise(resolve => setTimeout(resolve, 1000));
 
+    const bannerText = window.innerWidth < 600 ? mobileBanner : asciiBanner;
+
     const banner = document.createElement('pre');
     banner.style.lineHeight = '1';
     banner.style.marginBottom = '20px';
     banner.className = 'glitch';
-    banner.setAttribute('data-text', asciiBanner);
-    banner.textContent = asciiBanner;
+    banner.setAttribute('data-text', bannerText);
+    banner.textContent = bannerText;
     terminalBody.appendChild(banner);
 
     soundManager.speak("Welcome to my Website. System initialized.");
@@ -315,6 +340,7 @@ async function runBootSequence() {
 
 startOverlay.addEventListener('click', () => {
     soundManager.init();
+    soundManager.unlockMobile();
     startOverlay.classList.add('hidden');
     runBootSequence();
 });
