@@ -1,1 +1,164 @@
-const _0x4a7673=_0x2118;function _0x2118(_0x3f8d06,_0x132fb4){_0x3f8d06=_0x3f8d06-0x1d7;const _0x4b60f1=_0x4b60();let _0x211876=_0x4b60f1[_0x3f8d06];return _0x211876;}(function(_0x438420,_0x860142){const _0x144ceb=_0x2118,_0x271fc8=_0x438420();while(!![]){try{const _0x2855c6=parseInt(_0x144ceb(0x218))/0x1*(-parseInt(_0x144ceb(0x209))/0x2)+parseInt(_0x144ceb(0x1ff))/0x3*(parseInt(_0x144ceb(0x1fb))/0x4)+-parseInt(_0x144ceb(0x1f7))/0x5+parseInt(_0x144ceb(0x215))/0x6+-parseInt(_0x144ceb(0x1f8))/0x7+parseInt(_0x144ceb(0x212))/0x8+-parseInt(_0x144ceb(0x1e3))/0x9*(-parseInt(_0x144ceb(0x1f5))/0xa);if(_0x2855c6===_0x860142)break;else _0x271fc8['push'](_0x271fc8['shift']());}catch(_0x399647){_0x271fc8['push'](_0x271fc8['shift']());}}}(_0x4b60,0x80af7),document[_0x4a7673(0x206)]('DOMContentLoaded',function(){const _0x2589ee=_0x4a7673;var _0x4e3c94=Array[_0x2589ee(0x1fa)][_0x2589ee(0x1fd)][_0x2589ee(0x1dc)](document['querySelectorAll'](_0x2589ee(0x1ec)),0x0);_0x4e3c94['length']>0x0&&_0x4e3c94[_0x2589ee(0x1ed)](function(_0x255562){const _0x354513=_0x2589ee;_0x255562['addEventListener'](_0x354513(0x205),function(){const _0x5bcb47=_0x354513;var _0x17069f=_0x255562[_0x5bcb47(0x1f2)]['target'],_0x54450a=document[_0x5bcb47(0x1e2)](_0x17069f);_0x255562[_0x5bcb47(0x1eb)][_0x5bcb47(0x200)](_0x5bcb47(0x20c)),_0x54450a[_0x5bcb47(0x1eb)]['toggle'](_0x5bcb47(0x20c));});});}),$(document)['on']('click',_0x4a7673(0x1f4),function(_0x2a26d2){const _0x3ad705=_0x4a7673;_0x2a26d2[_0x3ad705(0x208)](),$('html,\x20body')[_0x3ad705(0x214)]({'scrollTop':$($[_0x3ad705(0x20a)](this,_0x3ad705(0x20e)))[_0x3ad705(0x1f1)]()[_0x3ad705(0x201)]},0x1f4);}),window['onscroll']=function(){scrollFunction();});function scrollFunction(){const _0x3854d7=_0x4a7673;document['body'][_0x3854d7(0x1e5)]>0x14||document[_0x3854d7(0x1e1)][_0x3854d7(0x1e5)]>0x14?document[_0x3854d7(0x1e2)]('toTop')['style'][_0x3854d7(0x207)]=_0x3854d7(0x1f0):document[_0x3854d7(0x1e2)]('toTop')[_0x3854d7(0x1d9)][_0x3854d7(0x207)]=_0x3854d7(0x1e4);}function _0x4b60(){const _0xa6e884=['addClass','call','innerHeight','createElement','random','animationDelay','documentElement','getElementById','9zeSJyl','none','scrollTop','auto','height','all\x20','DOMContentLoaded','animationDuration','classList','.navbar-burger','forEach','removeClass','bubbles-container','block','offset','dataset','left','a[href^=\x22#\x22]','19990610hlgvyX','image/2.gif','2172995HBRgUD','7305480DFmzkH','fadeOut','prototype','180276oucVmF','scroll','slice','scrollBy','15xbsqIp','toggle','top','body','birds-container','add','click','addEventListener','display','preventDefault','8UylThG','attr','appendChild','is-active','innerWidth','href','scroll\x20wheel\x20DOMMouseScroll\x20mousewheel\x20keyup\x20touchmove','ready','bubble','2620336mLCIMg','img','animate','391476CSnaee','s\x20ease-in-out','div','152965mMtsPV','2002','position','style','width'];_0x4b60=function(){return _0xa6e884;};return _0x4b60();}$(document)[_0x4a7673(0x210)](function(_0xfa1815){const _0x1c744e=_0x4a7673;_0xfa1815('.preloader-wrapper')[_0x1c744e(0x1f9)](),_0xfa1815('body')[_0x1c744e(0x1ee)]('preloader-site');}),$(window)['load'](function(){const _0x39b1f1=_0x4a7673;var _0x17845b=$(_0x39b1f1(0x202));_0x17845b[_0x39b1f1(0x1db)]('preloader-site');});var scrollInterval,isScrolling=![];function startScrolling(){if(isScrolling)return;isScrolling=!![],scrollInterval=setInterval(function(){const _0x5dcd27=_0x2118;window[_0x5dcd27(0x1fe)](0x0,0x1);},0x14);}function stopScrolling(){if(!isScrolling)return;isScrolling=![],clearInterval(scrollInterval);}$(window)['on'](_0x4a7673(0x20f),function(_0x4d6b26){const _0x21beb1=_0x4a7673;if(_0x4d6b26['type']===_0x21beb1(0x1fc)){}else stopScrolling();}),document[_0x4a7673(0x206)](_0x4a7673(0x1e9),function(){const _0x55dd6c=_0x4a7673,_0x5c80e0=document['getElementById'](_0x55dd6c(0x1ef));if(_0x5c80e0)for(let _0x40ae77=0x0;_0x40ae77<0x1e;_0x40ae77++){const _0x42aa30=document['createElement'](_0x55dd6c(0x217));_0x42aa30['classList']['add'](_0x55dd6c(0x211)),_0x42aa30[_0x55dd6c(0x1d9)][_0x55dd6c(0x1f3)]=Math[_0x55dd6c(0x1df)]()*0x64+'vw',_0x42aa30[_0x55dd6c(0x1d9)][_0x55dd6c(0x1da)]=_0x42aa30[_0x55dd6c(0x1d9)][_0x55dd6c(0x1e7)]=Math[_0x55dd6c(0x1df)]()*0xf+0xa+'px',_0x42aa30[_0x55dd6c(0x1d9)][_0x55dd6c(0x1ea)]=Math[_0x55dd6c(0x1df)]()*0x5+0x6+'s',_0x42aa30[_0x55dd6c(0x1d9)][_0x55dd6c(0x1e0)]=Math[_0x55dd6c(0x1df)]()*0x5+'s',_0x5c80e0['appendChild'](_0x42aa30);}}),document[_0x4a7673(0x206)](_0x4a7673(0x1e9),function(){const _0x4e65f2=_0x4a7673,_0x246d90=document['getElementById'](_0x4e65f2(0x203)),_0x12e4b2=0x3,_0x2ffd35=0x3;for(let _0x3f21e6=0x0;_0x3f21e6<_0x12e4b2;_0x3f21e6++){_0x4895b2(_0x4e65f2(0x1f6));}for(let _0x3c14b7=0x0;_0x3c14b7<_0x2ffd35;_0x3c14b7++){_0x4895b2('image/5.gif');}function _0x4895b2(_0x522f03){const _0x1b58e5=_0x4e65f2,_0x486fc5=document[_0x1b58e5(0x1de)](_0x1b58e5(0x213));_0x486fc5['src']=_0x522f03,_0x486fc5[_0x1b58e5(0x1eb)][_0x1b58e5(0x204)]('bird'),_0x486fc5[_0x1b58e5(0x1d9)][_0x1b58e5(0x1d8)]='absolute',_0x486fc5['style']['zIndex']=_0x1b58e5(0x1d7),_0x246d90[_0x1b58e5(0x20b)](_0x486fc5),_0x1e2d83(_0x486fc5);}function _0x1e2d83(_0x2d9d8e){const _0x3be6a6=_0x4e65f2,_0xa04739=0x32+Math[_0x3be6a6(0x1df)]()*0x32;_0x2d9d8e[_0x3be6a6(0x1d9)][_0x3be6a6(0x1da)]=_0xa04739+'px',_0x2d9d8e[_0x3be6a6(0x1d9)]['height']=_0x3be6a6(0x1e6),_0x37beb8(_0x2d9d8e,_0xa04739);}function _0x37beb8(_0x34e9c6,_0x4cfe0a){const _0x532546=_0x4e65f2,_0x2866c9=window[_0x532546(0x20d)]/0x64,_0x54fb78=window[_0x532546(0x1dd)]/0x64,_0x25f3e8=_0x4cfe0a/_0x2866c9,_0x12bda1=_0x4cfe0a*0.75/_0x54fb78,_0x17c3f8=Math[_0x532546(0x1df)]()*(0x64-_0x25f3e8),_0x4e5255=Math[_0x532546(0x1df)]()*(0x64-_0x12bda1),_0x250746=1.8+Math[_0x532546(0x1df)]()*0x5;_0x34e9c6[_0x532546(0x1d9)]['transition']=_0x532546(0x1e8)+_0x250746+_0x532546(0x216),_0x34e9c6[_0x532546(0x1d9)][_0x532546(0x1f3)]=_0x17c3f8+'vw',_0x34e9c6[_0x532546(0x1d9)][_0x532546(0x201)]=_0x4e5255+'vh',setTimeout(()=>{_0x37beb8(_0x34e9c6,_0x4cfe0a);},_0x250746*0x3e8);}});
+// Get that hamburger menu cookin' //
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Get all "navbar-burger" elements
+  var $navbarBurgers = Array.prototype.slice.call(
+    document.querySelectorAll(".navbar-burger"),
+    0
+  );
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
+    // Add a click event on each of them
+    $navbarBurgers.forEach(function($el) {
+      $el.addEventListener("click", function() {
+        // Get the target from the "data-target" attribute
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+        // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+        $el.classList.toggle("is-active");
+        $target.classList.toggle("is-active");
+      });
+    });
+  }
+});
+
+// Smooth Anchor Scrolling
+$(document).on("click", 'a[href^="#"]', function(event) {
+  event.preventDefault();
+  $("html, body").animate(
+    {
+      scrollTop: $($.attr(this, "href")).offset().top
+    },
+    500
+  );
+});
+
+// When the user scrolls down 20px from the top of the document, show the scroll up button
+window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("toTop").style.display = "block";
+  } else {
+    document.getElementById("toTop").style.display = "none";
+  }
+}
+
+// Preloader
+$(document).ready(function($) {
+  $(".preloader-wrapper").fadeOut();
+  $("body").removeClass("preloader-site");
+});
+$(window).load(function() {
+  var Body = $("body");
+  Body.addClass("preloader-site");
+});
+
+// Autoscroll
+var scrollInterval;
+var isScrolling = false;
+
+function startScrolling() {
+  if (isScrolling) return;
+  isScrolling = true;
+  scrollInterval = setInterval(function() {
+    window.scrollBy(0, 1);
+  }, 20);
+}
+
+function stopScrolling() {
+  if (!isScrolling) return;
+  isScrolling = false;
+  clearInterval(scrollInterval);
+}
+
+// Start scrolling when the page loads
+//$(document).ready(function() {
+//  setTimeout(startScrolling, 3000); // Start after 3 seconds to allow user to see the top
+//});
+
+// Stop scrolling on user interaction
+$(window).on('scroll wheel DOMMouseScroll mousewheel keyup touchmove', function(e) {
+  if ( e.type === 'scroll' ) {
+    // Let the native scroll happen
+  } else {
+    stopScrolling();
+  }
+});
+
+// Floating bubbles/stars effect
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.getElementById("bubbles-container");
+
+  if (container) {
+    for (let i = 0; i < 30; i++) {
+      const bubble = document.createElement("div");
+      bubble.classList.add("bubble");
+      bubble.style.left = Math.random() * 100 + "vw";
+      bubble.style.width = bubble.style.height = Math.random() * 15 + 10 + "px";
+      bubble.style.animationDuration = (Math.random() * 5 + 6) + "s";
+      bubble.style.animationDelay = (Math.random() * 5) + "s";
+      container.appendChild(bubble);
+    }
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const birdsContainer = document.getElementById("birds-container");
+
+  const totalBirds2 = 3;
+  const totalBirds5 = 3;
+
+  // Tambah 3 ekor burung 2.gif
+  for (let i = 0; i < totalBirds2; i++) {
+    createBird("image/2.gif");
+  }
+
+  // Tambah 5 ekor burung 5.gif
+  for (let i = 0; i < totalBirds5; i++) {
+    createBird("image/5.gif");
+  }
+
+  function createBird(src) {
+    const bird = document.createElement("img");
+    bird.src = src;
+    bird.classList.add("bird");
+    bird.style.position = "absolute";
+    bird.style.zIndex = "2002";
+
+    birdsContainer.appendChild(bird);
+
+    initBird(bird);
+  }
+
+  function initBird(bird) {
+    const sizePx = 50 + Math.random() * 50; // 50–100px
+    bird.style.width = sizePx + "px";
+    bird.style.height = "auto";
+
+    moveBird(bird, sizePx);
+  }
+
+  function moveBird(bird, sizePx) {
+    const vwPerPx = window.innerWidth / 100;
+    const vhPerPx = window.innerHeight / 100;
+
+    const birdWidthVw = sizePx / vwPerPx;
+    const birdHeightVh = (sizePx * 0.75) / vhPerPx;
+
+    const x = Math.random() * (100 - birdWidthVw);
+    const y = Math.random() * (100 - birdHeightVh);
+
+    const duration = 1.8 + Math.random() * 5;
+
+    bird.style.transition = `all ${duration}s ease-in-out`;
+    bird.style.left = x + "vw";
+    bird.style.top = y + "vh";
+
+    setTimeout(() => {
+      moveBird(bird, sizePx);
+    }, duration * 1000);
+  }
+});
