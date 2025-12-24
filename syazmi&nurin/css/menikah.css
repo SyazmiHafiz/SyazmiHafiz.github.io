@@ -1171,12 +1171,12 @@ body.preloader-site {
 }
 
 .main-content .section-pink-contact {
-    padding: 80px 40px;
+    padding: 30px 40px;
     background-color: #eee8e8
 }
 
 @media (max-width:599px) {
     .main-content .section-pink-contact {
-        padding: 80px 40px
+        padding: 30px 40px
     }
 }
