@@ -260,11 +260,12 @@
 					<div class="columns">
 						<div class="column is-12 hero-menu-desktop has-text-centered">
 							<ul>
-								<li class="is-active"><a href="#home">Home</a></li>
+								<li class="is-active"><a href="#home">Utama</a></li>
 								<li><a href="#aturan">Aturan Majlis</a></li>
 								<li><a href="#lokasi">Lokasi</a></li>
-								<li><a href="#hubungi">Hubungi</a></li>
 								<li><a href="#rsvp">RSVP</a></li>
+								<li><a href="#ucapan">Ucapan</a></li>
+								<li><a href="#hubungi">Hubungi</a></li>
 							</ul>
 						</div>
 					</div>
@@ -450,8 +451,8 @@
 			</div>
 		</section>
 		<div id="loveButton" class="hidden">❤️<div id="navMenu"><a href="#aturan">Aturan</a><a
-					href="#lokasi">Lokasi</a><a href="#hubungi">Hubungi</a><a href="#rsvp">RSVP</a><a
-					href="#ucapan">Ucapan</a></div>
+					href="#lokasi">Lokasi</a><a href="#rsvp">RSVP</a><a href="#ucapan">Ucapan</a><a
+					href="#hubungi">Hubungi</a></div>
 		</div>
 		<script>fetch("https://script.google.com/macros/s/AKfycbwuXq5D1sN_klkGyQqRGPmUUr4EkVtJ26aAc_WmQY-wdfahrFf-UYX5q8yV12tC02yE/exec").then(res => res.json()).then(data => { let html = ''; data.forEach(item => { if (item.ucapan && item.ucapan.trim() !== "") { html += `<div class="box has-text-centered" style="margin-bottom: 1rem;"><strong>${item.nama}</strong><br><em>"${item.ucapan}"</em></div>` } }); document.getElementById("ucapan-list").innerHTML = html });</script>
 		<div class="footer">
