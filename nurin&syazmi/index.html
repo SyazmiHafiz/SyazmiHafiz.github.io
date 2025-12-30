@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="theme-color" content="#BC8887" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>UNDANGAN MAJLIS PERKAHWINAN NURIN & SYAZMI</title>
+	<meta name="twitter:card" content="summary_large_image">
+	<link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
+	<link rel="stylesheet" href="https://unpkg.com/bulma-tooltip@0.1.5/dist/bulma-tooltip.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Petrona&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/menikah.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.countdown.css" />
+	<meta property="og:title" content="Undangan Majlis Perkahwinan Nurin & Syazmi" />
+	<meta property="og:description"
+		content="Jemputan ke Majlis Perkahwinan Nurin & Syazmi - 7 Februari 2026 di Edani's River Cottagè, Kuala Terengganu." />
+	<meta property="og:image" content="https://syazmi.com/nurin%26syazmi/image/UndanganMajlis.png" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://syazmi.com/nurin%26syazmi/" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://syazmi.com/nurin%26syazmi/image/UndanganMajlis.png" />
+	<script src="https://kit.fontawesome.com/2828f7885a.js"
+		integrity="sha384-WAsFbnLEQcpCk8lM1UTWesAf5rGTCvb2Y+8LvyjAAcxK1c3s5c0L+SYOgxvc6PWG"
+		crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="js/jquery.coundown.js"></script>
+	<link rel="icon" type="image/png" href="image/favicon.png" />
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23064379-20"></script>
+	<script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-23064379-20');</script>
+	<script async defer src="https://buttons.github.io/buttons.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+</head>
+<style>
+	body {
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	#statik-image {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		object-fit: cover;
+		z-index: 1;
+		pointer-events: none;
+		opacity: 1
+	}
+
+	@media (max-width:768px) {
+		#statik-image {
+			object-position: center
+		}
+	}
+
+	.overlay-opening {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 2000;
+		background: transparent
+	}
+
+	.door {
+		position: absolute;
+		top: 0;
+		height: 100vh;
+		width: 50%;
+		background: rgba(221, 187, 193, 0.85);
+		backdrop-filter: blur(6px);
+		transition: all 2s ease
+	}
+
+	.left-door {
+		left: 0
+	}
+
+	.right-door {
+		right: 0;
+		border-left: 1px solid #f8b8c4
+	}
+
+	.open-button {
+		position: relative;
+		width: 9rem;
+		height: 9rem;
+		background: rgba(255, 240, 245, 0.9);
+		border: 2px solid #f8b8c4;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: 'Cinzel Decorative', 'Noto Serif SC', serif;
+		font-size: 2.0rem;
+		color: #c43c68;
+		cursor: pointer;
+		z-index: 2001;
+		text-transform: uppercase;
+		box-shadow: 0 0 12px rgba(255, 192, 203, 0.8);
+		transition: transform 0.3s
+	}
+
+	.open-button:hover {
+		transform: scale(1.05)
+	}
+
+	.left-door,
+	.right-door {
+		position: fixed;
+		top: 0;
+		width: 50%;
+		height: 100vh;
+		background-image: url('../nurin&syazmi/image/hand.jpeg');
+		background-repeat: no-repeat;
+		background-size: 200% 100%;
+		transition: transform 2s ease-in-out;
+		will-change: transform;
+		z-index: 2000
+	}
+
+	@media (min-width:1024px) {
+
+		.left-door,
+		.right-door {
+			background-image: url('../nurin&syazmi/image/hand2.jpeg');
+			background-size: 200% 100%
+		}
+	}
+
+	.left-door {
+		left: 0;
+		background-position: left center;
+		transform-origin: left center
+	}
+
+	.right-door {
+		right: 0;
+		background-position: right center;
+		transform-origin: right center;
+		border-left: 1px solid #f8b8c4
+	}
+
+	.overlay-opening.open .left-door {
+		transform: rotateY(-100deg)
+	}
+
+	.overlay-opening.open .right-door {
+		transform: rotateY(100deg)
+	}
+
+	@media (max-width:768px) {
+		.overlay-opening.open .left-door {
+			transform: rotateY(-90deg)
+		}
+
+		.overlay-opening.open .right-door {
+			transform: rotateY(90deg)
+		}
+	}
+
+	.overlay-opening.open .left-door {
+		transform: translateX(-100%)
+	}
+
+	.overlay-opening.open .right-door {
+		transform: translateX(100%)
+	}
+
+	.overlay-opening.open .open-button {
+		opacity: 0;
+		transition: opacity 1s ease
+	}
+
+	.modal-content {
+		background-color: rgba(255, 250, 247, 0.95);
+		background-image: url(../nurin&syazmi/image/1111.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center
+	}
+
+	.modal-body {
+		text-align: center;
+		padding: 1rem
+	}
+
+	.modal-footer button {
+		margin: 0 auto
+	}
+</style>
+<div class="bubbles" id="bubbles-container"></div>
+
+<body onload="$('#myModal').modal('show')"><img id="statik-image" src="image/statik17.png" alt="statik">
+	<div class="overlay-opening" id="openingOverlay">
+		<div class="door left-door"></div>
+		<div class="door right-door"></div>
+		<div id="birds-container"></div>
+		<div class="open-button" id="openBtn"><span>丂 &amp; 几</span></div>
+	</div>
+	<script>function bukaPintu() { const a = document.getElementById("openingOverlay"); if (!a.classList.contains("open")) { a.classList.add("open"); setTimeout(() => { a.style.display = "none"; const b = document.getElementById("background_music"); if (b) b.play(); document.getElementById("loveButton").classList.remove("hidden"); if (typeof startScrolling === "function") startScrolling() }, 1400) } } document.getElementById("openingOverlay").addEventListener("click", bukaPintu);</script>
+	<div class="header-wrapper" id="home">
+		<section class="hero is-large">
+			<div class="hero-body">
+				<div class="container has-text-centered">
+					<h1 class="subtitle"
+						style="font-size: 1.4rem; font-weight: 600; letter-spacing: 1px; font-family: 'Playfair Display', serif;">
+						UNDANGAN MAJLIS PERKAHWINAN</h1><br>
+					<h2 class="title">Nurin</h2>
+					<h2 class="title">&</h2>
+					<h2 class="title">Syazmi</h2>
+					<h4 class="subtitle tempatwaktu">7 FEBRUARI 2026, SABTU</br>Edani's River Cottagè</br>2859, Jalan
+						Kampung Laut, Kampung Laut</br>21080 Kuala Terengganu, Terengganu</h4>
+				</div>
+				<div>
+					<ul id="hitungmundur">
+						<li><span class="days">00</span>
+							<p class="days_text">Hari</p>
+						</li>
+						<li class="separator">:</li>
+						<li><span class="hours">00</span>
+							<p class="hours_text">Jam</p>
+						</li>
+						<li class="separator">:</li>
+						<li><span class="minutes">00</span>
+							<p class="minutes_text">Minit</p>
+						</li>
+						<li class="separator">:</li>
+						<li><span class="seconds">00</span>
+							<p class="seconds_text">Saat</p>
+						</li>
+					</ul>
+					<div class="spasi"></div>
+					<script
+						type="text/javascript">var now = new Date(); var day = now.getDate(); var month = now.getMonth() + 1; var year = now.getFullYear() + 1; var nextyear = month + '/' + day + '/' + year + ' 07:07:07'; var hari = '02/07/2026 12:00:00'; $('#hitungmundur').countdown({ date: hari, offset: 8, day: 'Hari', days: 'Hari', hour: 'Jam', hours: 'Jam', minute: 'Minit', minutes: 'Minit', second: 'Saat', seconds: 'Saat' }, function () { alert('Done!') });</script>
+				</div>
+			</div>
+			<div class="hero-foot">
+				<div class="hero-foot--wrapper">
+					<div class="columns">
+						<div class="column is-12 hero-menu-desktop has-text-centered">
+							<ul>
+								<li class="is-active"><a href="#home">Utama</a></li>
+								<li><a href="#aturan">Aturan Majlis</a></li>
+								<li><a href="#lokasi">Lokasi</a></li>
+								<li><a href="#rsvp">RSVP</a></li>
+								<li><a href="#ucapan">Ucapan</a></li>
+								<li><a href="#hubungi">Hubungi</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<div class="main-content">
+		<section class="section-light no-padding-top regular-section has-text-centered has-vertically-aligned-content"
+			id="regular-section" data-aos="fade-up">
+			<div data-aos="fade-up" data-aos-easing="linear"><img src="image/bismillah.png"
+					class="bismillah has-text-centered" alt="Bismillahirrahmaanirrahiim"></div>
+			<p class="bodytext" data-aos="fade-up" data-aos-easing="linear" style="margin-top: 2rem;">Assalamualaikum
+				dan Selamat Sejahtera<br>Dengan nama Allah yang Maha Pengasih lagi Maha Penyayang</p><br>
+			<div class="bodytext" data-aos="fade-up" data-aos-easing="linear">
+				<p><strong>ASNIDZAL BIN MOHAMAD JAMEL</strong></p>
+				<div class="ampersand-parent">&</div>
+				<p><strong>NORLIZA BINTI MOHAMAD</strong></p>
+			</div><br>
+			<p class="bodytext" data-aos="fade-up" data-aos-easing="linear">Dengan penuh rasa kesyukuran,<br>kami ingin
+				menjemput <strong>Dato’/Datin/Tuan/Puan/Encik/Cik</strong><br>ke Majlis Perkahwinan Puteri kami</p>
+			<br>
+			<div data-aos="fade-up" data-aos-easing="linear">
+				<div class="nama-lengkap">NURIN AMALIN BINTI ASNIDZAL</div>
+				<div class="ampersand">&</div>
+				<div class="nama-lengkap">MUHAMMAD SYAZMI HAFIZ BIN SHAHARIN</div>
+			</div><br><br><br><br>
+		</section>
+		<section class="section-dark section-dark-divider" id="aturan">
+			<div class="container">
+				<div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
+					<h1 class="title has-text-centered section-title">Aturan Majlis</h1>
+				</div>
+				<div class="columns is-multiline" data-aos="fade-up" data-aos-easing="linear">
+					<div class="column is-4 has-vertically-aligned-content">
+						<p class="is-larger has-text-centered">
+						<div class="waktu tanggal-hari has-text-centered">Sabtu</div>
+						<div class="waktu tanggal-angka has-text-centered">7</div>
+						<div class="waktu tanggal-bulan has-text-centered">Februari 2026</div>
+						</p>
+					</div>
+					<div class="column is-4 has-vertically-aligned-content">
+						<h1 class="waktu is-larger has-text-centered">Resepsi:<br><strong>11:00AM - 04:00PM</strong>
+						</h1>
+					</div>
+					<div class="column is-4 has-vertically-aligned-content">
+						<p class="waktu is-larger has-text-centered">Turut Mengundang:<br><strong>Seisi
+								Keluarga</strong></p>
+					</div>
+				</div>
+			</div>
+			<div class="space40px"></div>
+		</section>
+		<section class="section-darker section-darker-divider" id="lokasi">
+			<div class="container">
+				<div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
+					<h1 class="title has-text-centered section-title">Lokasi</h1>
+					<p class="tempat is-larger has-text-centered"><strong>Edani's River
+							Cottagè</strong><br><strong>2859, Jalan Kampung Laut, Kampung Laut<br></strong><strong>21080
+							Kuala Terengganu, Terengganu<br></strong></p>
+				</div>
+				<div class="section-map" data-aos="fade-up" data-aos-easing="linear"><iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4372.577392765178!2d103.1462535!3d5.2730202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31b7bf95f26f91e7%3A0x1d53ca502b52c514!2sEdani's%20River%20Cottage!5e0!3m2!1sen!2smy!4v1685463701000!5m2!1sen!2smy"
+						width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe></div>
+				<div class="space40px"></div>
+				<div class="has-text-centered" data-aos="fade-up" data-aos-easing="linear"><a
+						href="https://www.google.com/maps/place/Edani's+River+Cottag%C3%A8/@5.2730202,103.1462535,19.19z/data=!4m9!3m8!1s0x31b7bf95f26f91e7:0x1d53ca502b52c514!5m2!4m1!1i2!8m2!3d5.2731471!4d103.1460794!16s%2Fg%2F11cm44mhhd?entry=ttu"
+						class="button btn-cta" target="_blank" data-aos="zoom-in"><i
+							class="far fa-directions"></i>&nbsp;&nbsp;Google Maps</a></div>
+			</div>
+		</section>
+
+		<section class="section-dark section-dark-divider contact" id="rsvp">
+			<div class="container" data-aos="fade-up">
+				<div class="columns is-centered">
+					<div class="column is-8 has-text-centered">
+						<h1 class="title section-title">RSVP</h1>
+						<p class="subtitle">Sila isi borang di bawah untuk maklumkan kehadiran anda</p>
+						<form id="rsvpForm" class="box"
+							style="background-color: #fffaf7; border-radius: 12px; padding: 2rem;">
+							<div class="field"><label class="label">Nama Penuh</label>
+								<div class="control"><input class="input" type="text" name="Nama"
+										placeholder="Nama Anda.." required></div>
+							</div>
+							<div class="field"><label class="label">Adakah anda akan hadir?</label>
+								<div class="control">
+									<div class="select is-fullwidth"><select name="Kehadiran" required>
+											<option value="">Sila Pilih</option>
+											<option value="Akan Hadir">Akan Hadir</option>
+											<option value="Tidak Dapat Hadir">Tidak Dapat Hadir</option>
+										</select></div>
+								</div>
+							</div>
+							<div class="field" id="jumlahField"><label class="label">Bilangan Kehadiran</label>
+								<div class="control">
+									<div class="select is-fullwidth"><select name="Jumlah" required>
+											<option value="">Sila Pilih</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+											<option value="8">8</option>
+											<option value="9">9</option>
+											<option value="10">10</option>
+										</select></div>
+								</div>
+							</div>
+							<div class="field"><label class="label">Ucapan (jika ada)</label>
+								<div class="control"><textarea class="textarea" name="Ucapan"
+										placeholder="Ucapan ringkas anda kepada pengantin..."></textarea></div>
+							</div>
+							<div class="field is-grouped is-grouped-centered">
+								<div class="control"><button class="button btn-cta" type="submit">Hantar RSVP</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script>document.getElementById('rsvpForm').addEventListener('submit', function (e) { e.preventDefault(); const form = e.target; const data = new FormData(form); fetch("https://script.google.com/macros/s/AKfycby_Y5Qcz00bCYp_wDSae6FHgGnVpJ_6o9RXqdxyuBnAHZX2f6fOf_sKaSSSwl31qoT9HA/exec", { method: "POST", body: data }).then(response => response.text()).then(result => { window.location.href = "https://syazmi.com/nurin&syazmi/thankyou.html" }).catch(error => { console.error("Error:", error); alert("Ralat semasa menghantar. Sila cuba semula.") }) }); const kehadiranSelect = document.querySelector('select[name="Kehadiran"]'); const jumlahField = document.getElementById('jumlahField'); function toggleJumlahField() { const jumlahSelect = jumlahField.querySelector('select'); if (kehadiranSelect.value === "Tidak Dapat Hadir") { jumlahField.style.display = "none"; jumlahSelect.value = ""; jumlahSelect.removeAttribute("required") } else { jumlahField.style.display = "block"; jumlahSelect.setAttribute("required", "required") } } kehadiranSelect.addEventListener('change', toggleJumlahField); window.addEventListener('DOMContentLoaded', toggleJumlahField);</script>
+		<section class="section-light" id="ucapan" data-aos="fade-up">
+			<div class="container" data-aos="fade-up">
+				<h2 class="title has-text-centered section-title">Ucapan Tetamu</h2>
+				<div id="ucapan-list" class="content"></div>
+			</div>
+		</section>
+		<section class="section-pink-contact section-dark-divider contact" id="hubungi">
+			<div class="container" data-aos="fade-up">
+		
+				<!-- Title -->
+				<h1 class="title has-text-centered section-title hubungi-title">
+					Hubungi
+				</h1>
+		
+				<!-- Contacts -->
+				<div class="columns is-centered has-text-centered hubungi-contacts">
+					<div class="column is-12-mobile is-6-tablet is-4-desktop">
+		
+						<p class="is-size-5">
+							Yan (Ayah)
+							<a href="https://wa.me/60142976515" target="_blank" class="mx-2 has-text-success">
+								<i class="fab fa-whatsapp fa-lg"></i>
+							</a>
+							<a href="tel:+60142976515" class="mx-2 has-text-grey">
+								<i class="fas fa-phone-alt fa-lg"></i>
+							</a>
+						</p>
+		
+						<p class="is-size-5">
+							Liza (Ibu)
+							<a href="https://wa.me/60179625780" target="_blank" class="mx-2 has-text-success">
+								<i class="fab fa-whatsapp fa-lg"></i>
+							</a>
+							<a href="tel:+60179625780" class="mx-2 has-text-grey">
+								<i class="fas fa-phone-alt fa-lg"></i>
+							</a>
+						</p>
+		
+						<p class="is-size-5">
+							Amanna (Adik)
+							<a href="https://wa.me/601117963493" target="_blank" class="mx-2 has-text-success">
+								<i class="fab fa-whatsapp fa-lg"></i>
+							</a>
+							<a href="tel:+601117963493" class="mx-2 has-text-grey">
+								<i class="fas fa-phone-alt fa-lg"></i>
+							</a>
+						</p>
+		
+					</div>
+				</div>
+		
+			</div>
+		</section>		
+		<div id="loveButton" class="hidden">❤️<div id="navMenu"><a href="#aturan">Aturan</a><a
+					href="#lokasi">Lokasi</a><a href="#rsvp">RSVP</a><a href="#ucapan">Ucapan</a><a
+					href="#hubungi">Hubungi</a></div>
+		</div>
+		<script>fetch("https://script.google.com/macros/s/AKfycby_Y5Qcz00bCYp_wDSae6FHgGnVpJ_6o9RXqdxyuBnAHZX2f6fOf_sKaSSSwl31qoT9HA/exec").then(res => res.json()).then(data => { let html = ''; data.forEach(item => { if (item.ucapan && item.ucapan.trim() !== "") { html += `<div class="box has-text-centered" style="margin-bottom: 1rem;"><strong>${item.nama}</strong><br><em>"${item.ucapan}"</em></div>` } }); document.getElementById("ucapan-list").innerHTML = html });</script>
+		<div class="footer">
+			<div class="container"><a href="https://syazmi.com/nurin&syazmi" class="has-vertically-align">
+					<p class="has-vertically-align">2026 &copy Nurin&Syazmi</p>
+				</a></div>
+		</div><audio id="background_music" autoplay loop style="display: none;">
+			<source src="music3.mp3" type="audio/mpeg">
+		</audio>
+		<script src="js/menikah.js"></script>
+		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+		<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+		<script>AOS.init({ easing: "ease-out", duration: 800, once: false }); function playMusic() { document.getElementById("background_music"); background_music.play(); document.getElementById("myModal").style.display = "none" }</script>
+		<script>const loveButton = document.getElementById("loveButton"); const navMenu = document.getElementById("navMenu"); let isDragging = false; let offsetX = 0, offsetY = 0; function startDrag(e) { isDragging = true; const touch = e.type.includes("touch") ? e.touches[0] : e; offsetX = touch.clientX - loveButton.getBoundingClientRect().left; offsetY = touch.clientY - loveButton.getBoundingClientRect().top; loveButton.style.cursor = "grabbing" } function drag(e) { if (!isDragging) return; e.preventDefault(); const touch = e.type.includes("touch") ? e.touches[0] : e; loveButton.style.left = (touch.clientX - offsetX) + "px"; loveButton.style.top = (touch.clientY - offsetY) + "px"; loveButton.style.right = "auto"; loveButton.style.bottom = "auto" } function endDrag() { isDragging = false; loveButton.style.cursor = "grab" } loveButton.addEventListener("mousedown", startDrag); document.addEventListener("mousemove", drag); document.addEventListener("mouseup", endDrag); loveButton.addEventListener("touchstart", startDrag); document.addEventListener("touchmove", drag); document.addEventListener("touchend", endDrag); loveButton.addEventListener("click", function (e) { if (!isDragging) { navMenu.classList.toggle("show"); e.stopPropagation() } }); document.addEventListener("click", function () { navMenu.classList.remove("show") }); document.querySelectorAll("#navMenu a").forEach(link => { link.addEventListener("click", function (e) { e.preventDefault(); const targetId = this.getAttribute("href").substring(1); const targetEl = document.getElementById(targetId); if (!targetEl) return; const offsetTop = targetEl.getBoundingClientRect().top + window.scrollY - 60; if (typeof stopScrolling === "function") stopScrolling(); setTimeout(() => { window.scrollTo({ top: offsetTop, behavior: 'smooth' }); targetEl.classList.add("highlight"); setTimeout(() => targetEl.classList.remove("highlight"), 1000); navMenu.classList.remove("show") }, 150) }) }); function tukarStatikImage() { const img = document.getElementById("statik-image"); if (window.innerWidth <= 768) { img.src = "image/statik18.png" } else { img.src = "image/statik17.png" } } tukarStatikImage(); window.addEventListener("resize", tukarStatikImage);</script>
+		<script>
+			document.addEventListener('contextmenu', event => event.preventDefault());
+			document.onkeydown = function (e) {
+				if (e.keyCode == 123) { return false; }
+				if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { return false; }
+				if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) { return false; }
+				if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) { return false; }
+				if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { return false; }
+			}
+		</script>
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+(function () { var a = document.querySelector('.burger'); var b = document.querySelector('#' + a.dataset.target); a.addEventListener('click', function () { a.classList.toggle('is-active'); b.classList.toggle('is-active') }) })();
