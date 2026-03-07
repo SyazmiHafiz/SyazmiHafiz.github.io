@@ -224,8 +224,8 @@
 			<div class="hero-body">
 				<div class="container has-text-centered">
 					<h1 class="subtitle"
-						style="font-size: 1.4rem; font-weight: 600; letter-spacing: 1px; font-family: 'Playfair Display', serif;">
-						UNDANGAN MAJLIS PERKAHWINAN</h1><br>
+						style="font-size: 2.4rem; font-weight: 600; letter-spacing: 1px; font-family: 'Playfair Display', serif;">
+						Our Beginning 🤍</h1><br>
 					<h2 class="title">Syazmi</h2>
 					<h2 class="title">&</h2>
 					<h2 class="title">Nurin</h2>
@@ -234,6 +234,14 @@
 				</div>
 				<div>
 					<ul id="hitungmundur">
+						<li id="year-block" style="display: none;"><span class="years">00</span>
+							<p class="years_text">Tahun</p>
+						</li>
+						<li id="year-separator" class="separator" style="display: none;">:</li>
+						<li><span class="months">00</span>
+							<p class="months_text">Bulan</p>
+						</li>
+						<li class="separator">:</li>
 						<li><span class="days">00</span>
 							<p class="days_text">Hari</p>
 						</li>
@@ -251,8 +259,56 @@
 						</li>
 					</ul>
 					<div class="spasi"></div>
-					<script
-						type="text/javascript">var now = new Date(); var day = now.getDate(); var month = now.getMonth() + 1; var year = now.getFullYear() + 1; var nextyear = month + '/' + day + '/' + year + ' 07:07:07'; var hari = '02/07/2026 12:00:00'; $('#hitungmundur').countdown({ date: hari, offset: 8, day: 'Hari', days: 'Hari', hour: 'Jam', hours: 'Jam', minute: 'Minit', minutes: 'Minit', second: 'Saat', seconds: 'Saat' }, function () { alert('Done!') });</script>
+					<script type="text/javascript">
+						function updateCountUp() {
+							var startDate = new Date('2026-02-07T09:17:00+08:00');
+							var now = new Date();
+							var diff = now - startDate;
+
+							if (diff < 0) {
+								document.querySelector('.years').innerText = '00';
+								document.querySelector('.months').innerText = '00';
+								document.querySelector('.days').innerText = '00';
+								document.querySelector('.hours').innerText = '00';
+								document.querySelector('.minutes').innerText = '00';
+								document.querySelector('.seconds').innerText = '00';
+								return;
+							}
+
+							var years = now.getFullYear() - startDate.getFullYear();
+							var months = now.getMonth() - startDate.getMonth();
+							var days = now.getDate() - startDate.getDate();
+							var hours = now.getHours() - startDate.getHours();
+							var minutes = now.getMinutes() - startDate.getMinutes();
+							var seconds = now.getSeconds() - startDate.getSeconds();
+
+							if (seconds < 0) { minutes--; seconds += 60; }
+							if (minutes < 0) { hours--; minutes += 60; }
+							if (hours < 0) { days--; hours += 24; }
+							if (days < 0) {
+								months--;
+								var prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+								days += prevMonth.getDate();
+							}
+							if (months < 0) { years--; months += 12; }
+
+							if (years === 0) {
+								document.getElementById('year-block').style.display = 'none';
+								document.getElementById('year-separator').style.display = 'none';
+							} else {
+								document.getElementById('year-block').style.display = 'inline-block';
+								document.getElementById('year-separator').style.display = 'inline-block';
+								document.querySelector('.years').innerText = String(years).padStart(2, '0');
+							}
+							document.querySelector('.months').innerText = String(months).padStart(2, '0');
+							document.querySelector('.days').innerText = String(days).padStart(2, '0');
+							document.querySelector('.hours').innerText = String(hours).padStart(2, '0');
+							document.querySelector('.minutes').innerText = String(minutes).padStart(2, '0');
+							document.querySelector('.seconds').innerText = String(seconds).padStart(2, '0');
+						}
+						setInterval(updateCountUp, 1000);
+						updateCountUp();
+					</script>
 				</div>
 			</div>
 			<div class="hero-foot">
