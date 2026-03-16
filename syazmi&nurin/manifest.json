@@ -1,0 +1,21 @@
+{
+  "name": "Undangan Majlis Perkahwinan Syazmi & Nurin",
+  "short_name": "Syazmi & Nurin",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#BC8887",
+  "description": "Jemputan ke Majlis Perkahwinan Syazmi & Nurin - 7 Februari 2026",
+  "icons": [
+    {
+      "src": "image/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "image/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
