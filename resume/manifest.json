@@ -1,0 +1,17 @@
+{
+  "name": "Syazmi Hafiz | IT Portfolio",
+  "short_name": "Syazmi Portfolio",
+  "description": "Professional portfolio and resume of Muhammad Syazmi Hafiz Bin Shaharin, Information Technology expert.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#0d0e15",
+  "theme_color": "#0d0e15",
+  "icons": [
+    {
+      "src": "assets/profile.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
