@@ -286,7 +286,7 @@ main {
     height: 0%;
     background: var(--accent);
     box-shadow: 0 0 10px var(--accent-glow), 0 0 20px var(--accent);
-    transition: height 0.1s linear;
+    /* Removed transition for unlaggy 60fps tracking */
 }
 .timeline-moving-dot {
     position: absolute;
@@ -300,7 +300,7 @@ main {
     border-radius: 50%;
     box-shadow: 0 0 15px var(--accent), 0 0 30px var(--accent-glow);
     z-index: 2;
-    transition: top 0.1s linear;
+    /* Removed transition for unlaggy 60fps tracking */
     animation: pulse-ring 2s infinite;
 }
 

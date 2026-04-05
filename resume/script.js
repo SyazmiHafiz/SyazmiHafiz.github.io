@@ -63,34 +63,40 @@ document.addEventListener('DOMContentLoaded', () => {
     const timelineItems = document.querySelectorAll('.timeline-item');
 
     if (timeline && progressBar && movingDot) {
-        // Debounce or requestAnimationFrame can be used for performance, 
-        // but for smooth simple tracking on modern devices this is fine.
-        window.addEventListener('scroll', () => {
-            const timelineRect = timeline.getBoundingClientRect();
-            const viewportHeight = window.innerHeight;
-            
-            // Percentage scrolled relative to the timeline visibility in the viewport
-            const startPos = timelineRect.top - (viewportHeight / 2);
-            const timelineHeight = timelineRect.height;
-            
-            // Calculate progress (0 to 100)
-            let scrolled = (viewportHeight / 2) - timelineRect.top; 
-            let percentage = (scrolled / timelineHeight) * 100;
-            percentage = Math.max(0, Math.min(percentage, 100)); // Clamp
-            
-            progressBar.style.height = `${percentage}%`;
-            movingDot.style.top = `${percentage}%`;
+        let isTicking = false;
 
-            // Active State for Items
-            timelineItems.forEach(item => {
-                const itemRect = item.getBoundingClientRect();
-                // When item reaches middle of viewport
-                if (itemRect.top < viewportHeight / 2 + 80) {
-                    item.classList.add('active');
-                } else {
-                    item.classList.remove('active');
-                }
-            });
+        window.addEventListener('scroll', () => {
+            if (!isTicking) {
+                window.requestAnimationFrame(() => {
+                    const timelineRect = timeline.getBoundingClientRect();
+                    const viewportHeight = window.innerHeight;
+                    
+                    // Percentage scrolled relative to the timeline visibility in the viewport
+                    const timelineHeight = timelineRect.height;
+                    
+                    // Calculate progress (0 to 100)
+                    let scrolled = (viewportHeight / 2) - timelineRect.top; 
+                    let percentage = (scrolled / timelineHeight) * 100;
+                    percentage = Math.max(0, Math.min(percentage, 100)); // Clamp
+                    
+                    progressBar.style.height = `${percentage}%`;
+                    movingDot.style.top = `${percentage}%`;
+
+                    // Active State for Items
+                    timelineItems.forEach(item => {
+                        const itemRect = item.getBoundingClientRect();
+                        // When item reaches middle of viewport
+                        if (itemRect.top < viewportHeight / 2 + 80) {
+                            item.classList.add('active');
+                        } else {
+                            item.classList.remove('active');
+                        }
+                    });
+                    
+                    isTicking = false;
+                });
+                isTicking = true;
+            }
         });
         
         // Initial trigger
